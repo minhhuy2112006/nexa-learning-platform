@@ -201,3 +201,21 @@
 /* Supplied artwork replaces text-only covers in the primary Library page. */
 .library-resource-card .resource-cover.cover-image { padding: 0; }
 .library-resource-card .resource-cover.cover-image img { display: block; width: 100%; height: 100%; object-fit: cover; }
+/* Each supplied cover fills its complete card cover frame without letterboxing. */
+.library-resource-card .resource-cover.cover-image {
+  position: relative;
+  display: block;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.library-resource-card .resource-cover.cover-image img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
+}
