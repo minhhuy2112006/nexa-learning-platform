@@ -256,3 +256,10 @@
 .library-select span::before { transform: translateY(4px); }
 /* Reserve a fixed action lane so resource titles never run below the two top-right controls. */
 .library-resource-card .resource-copy { padding-right: 60px; }
+/* Resource actions live together in the footer: more, delete, save, download. */
+.library-resource-card .resource-copy { padding-right: 0; }
+.library-resource-card footer { grid-template-columns: minmax(0, 1fr) repeat(4, 28px); }
+.library-resource-card footer button[data-library-more] { font-family: Arial, sans-serif; font-size: 12px; letter-spacing: -1px; }
+.library-resource-card footer button[data-library-remove-resource] { color: #f1b1bd; }
+.library-resource-card footer button[data-library-remove-resource]:hover { border-color: #e2748f !important; background: #5d2943 !important; color: #fff; }
+.library-remove-icon { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
