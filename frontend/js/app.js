@@ -188,7 +188,7 @@ Object.assign(views, {
       <header class="reader-appbar">
         <button class="reader-back" data-route="library">← <span>Back to Library</span></button>
         <strong>▧ &nbsp; Database Systems — Fundamentals of Database Design</strong>
-        <nav aria-label="Reader tools"><button title="Search">⌕<small>Search</small></button><button title="Bookmark">♧<small>Bookmark</small></button><button title="Highlight">✦<small>Highlight</small></button><button title="Notes">▤<small>Notes</small></button><button title="More">•••<small>More</small></button></nav>
+        <nav aria-label="Reader tools"><button title="Search">⌕<small>Search</small></button><button type="button" title="Bookmark" data-reader-bookmark aria-pressed="false">♧<small>Bookmark</small></button><button title="Highlight">✦<small>Highlight</small></button><button title="Notes">▤<small>Notes</small></button><button title="More">•••<small>More</small></button></nav>
       </header>
       <div class="reader-stage">
         <aside class="reader-contents">
@@ -207,7 +207,7 @@ Object.assign(views, {
         <main class="reader-book-frame" aria-label="Textbook pages">
           <div class="reader-book">
             <article class="reader-page">
-              <header><span>Chapter 3 · Normalization</span><b>68</b></header>
+              <header><span>Chapter 3 · Normalization</span><b data-reader-page="left">68</b></header>
               <h1>3.2.2 &nbsp; Second Normal Form (2NF)</h1>
               <p><b>Second Normal Form (2NF)</b> is a rule used in database normalization to eliminate partial dependencies. A relation is in 2NF if it is in 1NF and every non-key attribute is fully dependent on the whole primary key.</p>
               <ul><li>Every non-key attribute is fully functionally dependent on the primary key.</li><li>No attribute depends on only part of a composite primary key.</li></ul>
@@ -218,7 +218,7 @@ Object.assign(views, {
               <aside><b>⊙</b><span>In this relation, StudentName depends only on StudentID, and CourseName depends only on CourseID. These are partial dependencies, so the relation is not in 2NF.</span></aside>
             </article>
             <article class="reader-page">
-              <header><span>Chapter 3 · Normalization</span><b>69</b></header>
+              <header><span>Chapter 3 · Normalization</span><b data-reader-page="right">69</b></header>
               <h2>How to Achieve 2NF</h2>
               <p>To convert a relation to 2NF:</p>
               <ol><li>Ensure the relation is in 1NF.</li><li>Identify partial dependencies.</li><li>Decompose the relation into smaller relations so that every non-key attribute depends on the whole primary key.</li></ol>
@@ -233,9 +233,9 @@ Object.assign(views, {
         </main>
       </div>
       <footer class="reader-bottom-bar">
-        <button type="button">← &nbsp; Previous</button>
-        <b>68 / 312</b>
-        <button type="button">Next &nbsp; →</button>
+        <button type="button" data-reader-previous>← &nbsp; Previous</button>
+        <b data-reader-position>68 / 312</b>
+        <button type="button" data-reader-next>Next &nbsp; →</button>
         <span><button type="button" title="Reader view">▧</button><button class="active" type="button" title="Book view">▥</button><button type="button" title="Grid view">▦</button></span>
         <button type="button" title="Full screen">⛶</button>
       </footer>
@@ -332,10 +332,50 @@ function renderProduct(route) {
   if (view === 'learning') { setupLearningControls(); requestAnimationFrame(syncLearningSummaryHeight); }
   if (view === 'curriculum') setupCurriculumControls();
   if (view === 'library') setupLibraryControls();
+  if (view === 'textbook') setupReaderControls();
   if (view === 'product-home') setupNexaAiOrb();
 }
 
 
+
+function setupReaderControls() {
+  const host = document.querySelector('.reader-workspace');
+  if (!host) return;
+
+  const storageKey = 'nexa-reader-database-systems';
+  const saved = JSON.parse(localStorage.getItem(storageKey) || '{}');
+  let page = Math.min(311, Math.max(2, Number(saved.page) || 68));
+  let bookmarked = Boolean(saved.bookmarked);
+  const previous = host.querySelector('[data-reader-previous]');
+  const next = host.querySelector('[data-reader-next]');
+  const position = host.querySelector('[data-reader-position]');
+  const leftPage = host.querySelector('[data-reader-page="left"]');
+  const rightPage = host.querySelector('[data-reader-page="right"]');
+  const bookmark = host.querySelector('[data-reader-bookmark]');
+
+  const persist = () => localStorage.setItem(storageKey, JSON.stringify({ page, bookmarked }));
+  const update = () => {
+    position.textContent = `${page} / 312`;
+    leftPage.textContent = page;
+    rightPage.textContent = page + 1;
+    previous.disabled = page <= 2;
+    next.disabled = page >= 311;
+    previous.classList.toggle('is-disabled', previous.disabled);
+    next.classList.toggle('is-disabled', next.disabled);
+    bookmark.classList.toggle('is-active', bookmarked);
+    bookmark.setAttribute('aria-pressed', String(bookmarked));
+    bookmark.firstChild.textContent = bookmarked ? '✓' : '♧';
+    persist();
+  };
+
+  previous.addEventListener('click', () => { page = Math.max(2, page - 2); update(); });
+  next.addEventListener('click', () => { page = Math.min(311, page + 2); update(); });
+  bookmark.addEventListener('click', () => { bookmarked = !bookmarked; update(); });
+  host.querySelectorAll('.reader-chapters button').forEach((button) => button.addEventListener('click', () => {
+    host.querySelectorAll('.reader-chapters button').forEach((item) => item.classList.toggle('active', item === button));
+  }));
+  update();
+}
 function setupLibraryControls() {
   const host = document.querySelector('.library-dashboard');
   if (!host) return;
