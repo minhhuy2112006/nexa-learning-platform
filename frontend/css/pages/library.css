@@ -236,3 +236,19 @@
   line-height: 1;
   transform: translateY(-1px);
 }
+/* A geometric chevron avoids font-baseline drift beside filter labels. */
+.library-select span {
+  width: 16px;
+  height: 16px;
+  transform: none;
+  font-size: 0;
+}
+
+.library-select span::before {
+  width: 0;
+  height: 0;
+  content: '';
+  border-top: 6px solid #9d8dff;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
