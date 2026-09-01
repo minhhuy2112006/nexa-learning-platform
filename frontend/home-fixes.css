@@ -1324,3 +1324,70 @@
     stroke: currentColor !important;
   }
 }
+/* Final lock: no route-specific Curriculum rule may override the shared Learning rail. */
+@media (min-width: 901px) {
+  #product-view .module-layout .learning-rail {
+    grid-column: 1 !important;
+    justify-self: stretch !important;
+    align-self: start !important;
+    position: sticky !important;
+    top: 75px !important;
+    box-sizing: border-box !important;
+    width: calc(100% - 10px) !important;
+    height: calc(100vh - 88px) !important;
+    min-height: 0 !important;
+    max-height: calc(100vh - 88px) !important;
+    margin: 4px 0 12px 10px !important;
+    padding: 11px 10px 10px !important;
+    overflow-y: auto !important;
+    border: 1px solid #2b3c61 !important;
+    border-radius: 12px !important;
+    background: #0d1422 !important;
+    color: #c5d2ef !important;
+  }
+  #product-view .module-layout .learning-rail .learning-sidebar-level {
+    gap: 10px !important;
+    margin: -1px 0 13px !important;
+    padding: 7px 6px 14px !important;
+    border-bottom: 1px solid #263d69 !important;
+  }
+  #product-view .module-layout .learning-rail .learning-sidebar-level > i {
+    width: 62px !important;
+    height: 62px !important;
+  }
+  #product-view .module-layout .learning-rail > p {
+    margin: 0 6px 7px !important;
+    color: #9fb5dc !important;
+  }
+  #product-view .module-layout .learning-rail button {
+    min-height: 42px !important;
+    margin: 3px 0 !important;
+    padding: 10px 12px !important;
+    border: 0 !important;
+    border-radius: 8px !important;
+    background: transparent !important;
+    color: #c5d2ef !important;
+    font-size: 14px !important;
+  }
+  #product-view .module-layout .learning-rail button.active {
+    background: linear-gradient(90deg, #34247f, #3a2a86) !important;
+    color: #f3efff !important;
+    box-shadow: 0 0 16px rgba(126, 84, 255, .16) !important;
+  }
+  #product-view .module-layout .learning-rail .module-menu-icon {
+    flex: 0 0 20px !important;
+    width: 20px !important;
+    height: 20px !important;
+    color: #c5d2ef !important;
+  }
+  #product-view .module-layout .learning-rail button.active .module-menu-icon {
+    color: #eee7ff !important;
+    filter: drop-shadow(0 0 5px #ae72ff) !important;
+  }
+  #product-view .module-layout .learning-rail .module-menu-icon svg {
+    width: 19px !important;
+    height: 19px !important;
+    fill: none !important;
+    stroke: currentColor !important;
+  }
+}
