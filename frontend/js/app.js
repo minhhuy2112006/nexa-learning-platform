@@ -301,7 +301,7 @@ function renderProduct(route) {
   const menu = sectionMenus[section];
   const content = (views[view]?.() || views['product-home']()).replaceAll('Minh Anh', 'Vân Anh');
   const levelCaption = view === 'library' ? '' : '<small>Lv.</small>';
-  const levelNote = view === 'library' ? '<small class="library-level-note">Learning Level <span title="XP is earned from learning activity">ⓘ</span></small>' : '<small>Learning Level</small>';
+  const levelNote = view === 'library' ? '<small class="library-level-note">Learning Level</small>' : '<small>Learning Level</small>';
   const learningLevel = section === 'learning' ? `<section class="learning-sidebar-level"><i>${levelCaption}<b>12</b></i><strong>1,250 / 2,000 XP</strong><span><b></b></span>${levelNote}</section>` : '';
   const isReader = view === 'textbook';
   document.querySelector('#product-view').innerHTML = menu ? `<div class="module-layout ${section === 'learning' ? 'learning-section' : ''}${isReader ? ' reader-layout' : ''}">${isReader ? content : `<aside class="module-sidebar">${learningLevel}<p>${section === 'ai-study' ? 'AI STUDY' : section.toUpperCase()}</p>${menu.map(([name,label,icon],index) => `<button data-route="${name}" class="${(name === view || (!index && section === view)) ? 'active' : ''}"><span class="module-menu-icon">${icon}</span><span>${label}</span></button>`).join('')}</aside>${content}`}</div>` : content;
