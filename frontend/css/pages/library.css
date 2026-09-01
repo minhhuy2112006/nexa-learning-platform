@@ -175,3 +175,7 @@
     padding-top: 0;
   }
 }
+/* Notes describe their material; completed resources use a concise green state. */
+.resource-note-caption > span { color: #aebbd2; }
+.resource-finished { display: flex; align-items: center; min-height: 12px; }
+.resource-finished > b { color: #79e7ad !important; font-size: 8px; }
