@@ -145,7 +145,7 @@
     width: 60px;
     height: 60px;
     justify-self: center;
-    background: url('reference-icons.png') -212px -10px / 282px 210px no-repeat !important;
+    background: url('../../assets/images/reference-icons.png') -212px -10px / 282px 210px no-repeat !important;
     animation: level-orbit 3.2s ease-in-out infinite;
   }
   .xp-progress > div > span { color: #d4d8ff; font-size: 11px; }
@@ -209,28 +209,28 @@
     background-repeat: no-repeat !important;
     background-size: cover !important;
   }
-  .home-progress h2 > i { background-image: url('icon-progress.png') !important; }
-  .home-plan h2 > i { background-image: url('icon-target.png') !important; }
-  .home-calendar h2 > i { background-image: url('icon-calendar.png') !important; }
-  .home-continue h2 > i { background-image: url('icon-book-ring.png') !important; }
-  .home-deadlines h2 > i { background-image: url('icon-clock.png') !important; }
-  .metric-icon.book { background-image: url('icon-book.png') !important; }
-  .metric-icon.clock { background-image: url('icon-clock.png') !important; }
-  .metric-icon.target { background-image: url('icon-task.png') !important; }
-  .metric-icon.fire { background-image: url('icon-fire.png') !important; }
-  .home-plan button:nth-of-type(1) i { background-image: url('icon-calendar.png') !important; }
-  .home-plan button:nth-of-type(2) i { background-image: url('icon-target.png') !important; }
-  .home-plan button:nth-of-type(3) i { background-image: url('icon-book.png') !important; }
-  .reference-course-grid button:nth-child(1) .reference-course-icon { background-image: url('icon-book-ring.png') !important; }
-  .reference-course-grid button:nth-child(2) .reference-course-icon { background-image: url('icon-target.png') !important; }
-  .reference-course-grid button:nth-child(3) .reference-course-icon { background-image: url('icon-progress.png') !important; }
-  .reference-course-grid button:nth-child(4) .reference-course-icon { background-image: url('icon-book.png') !important; }
-  .deadline-icon.red { background-image: url('icon-target.png') !important; }
-  .deadline-icon.orange { background-image: url('icon-fire.png') !important; }
-  .deadline-icon.blue { background-image: url('icon-calendar.png') !important; }
-  .xp-progress > i { background: url('icon-level.png') center / cover no-repeat !important; }
+  .home-progress h2 > i { background-image: url('../../assets/images/icon-progress.png') !important; }
+  .home-plan h2 > i { background-image: url('../../assets/images/icon-target.png') !important; }
+  .home-calendar h2 > i { background-image: url('../../assets/images/icon-calendar.png') !important; }
+  .home-continue h2 > i { background-image: url('../../assets/images/icon-book-ring.png') !important; }
+  .home-deadlines h2 > i { background-image: url('../../assets/images/icon-clock.png') !important; }
+  .metric-icon.book { background-image: url('../../assets/images/icon-book.png') !important; }
+  .metric-icon.clock { background-image: url('../../assets/images/icon-clock.png') !important; }
+  .metric-icon.target { background-image: url('../../assets/images/icon-task.png') !important; }
+  .metric-icon.fire { background-image: url('../../assets/images/icon-fire.png') !important; }
+  .home-plan button:nth-of-type(1) i { background-image: url('../../assets/images/icon-calendar.png') !important; }
+  .home-plan button:nth-of-type(2) i { background-image: url('../../assets/images/icon-target.png') !important; }
+  .home-plan button:nth-of-type(3) i { background-image: url('../../assets/images/icon-book.png') !important; }
+  .reference-course-grid button:nth-child(1) .reference-course-icon { background-image: url('../../assets/images/icon-book-ring.png') !important; }
+  .reference-course-grid button:nth-child(2) .reference-course-icon { background-image: url('../../assets/images/icon-target.png') !important; }
+  .reference-course-grid button:nth-child(3) .reference-course-icon { background-image: url('../../assets/images/icon-progress.png') !important; }
+  .reference-course-grid button:nth-child(4) .reference-course-icon { background-image: url('../../assets/images/icon-book.png') !important; }
+  .deadline-icon.red { background-image: url('../../assets/images/icon-target.png') !important; }
+  .deadline-icon.orange { background-image: url('../../assets/images/icon-fire.png') !important; }
+  .deadline-icon.blue { background-image: url('../../assets/images/icon-calendar.png') !important; }
+  .xp-progress > i { background: url('../../assets/images/icon-level.png') center / cover no-repeat !important; }
 
-  .nexa-ai-orb { background: url('icon-orb.png') center / cover no-repeat !important; border: 0; color: transparent; }
+  .nexa-ai-orb { background: url('../../assets/images/icon-orb.png') center / cover no-repeat !important; border: 0; color: transparent; }
   .nexa-ai-chat { position: fixed; top: auto; right: 24px; bottom: 24px; left: auto; }
 }
 
@@ -249,7 +249,7 @@
 .home-plan button i,
 .reference-course-icon,
 .deadline-icon {
-  background-image: url('reference-icons.png') !important;
+  background-image: url('../../assets/images/reference-icons.png') !important;
   background-repeat: no-repeat !important;
   color: transparent !important;
 }
@@ -277,7 +277,7 @@
 .deadline-icon.red { background-position: -32px -32px !important; }
 .deadline-icon.orange { background-position: -4px -32px !important; }
 .deadline-icon.blue { background-position: -88px -32px !important; }
-.xp-progress > i { background: url('reference-icons.png') -120px -6px / 160px 119px no-repeat !important; color: transparent; }
+.xp-progress > i { background: url('../../assets/images/reference-icons.png') -120px -6px / 160px 119px no-repeat !important; color: transparent; }
 .xp-progress > i b { display: none; }
 
 /* Crisp Home icons based on the supplied icon set. */

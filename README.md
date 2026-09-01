@@ -12,4 +12,4 @@ cd frontend
 node serve.js
 ```
 
-The public frontend is deployed from `frontend/` by GitHub Actions.
+The public frontend is deployed from `frontend/` through GitHub Pages.

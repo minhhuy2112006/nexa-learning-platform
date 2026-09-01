@@ -253,7 +253,7 @@ function setupNexaAiOrb() {
       note.textContent = note.textContent.trim();
     }
   });
-  const courseIcons = ['icon-book-ring.png', 'icon-target.png', 'icon-progress.png', 'icon-book.png'];
+  const courseIcons = ['assets/images/icon-book-ring.png', 'assets/images/icon-target.png', 'assets/images/icon-progress.png', 'assets/images/icon-book.png'];
   const courseIconVersion = 'home-icons-20260902';
   host.querySelectorAll('.reference-course-icon').forEach((icon, index) => {
     icon.innerHTML = `<img src="${courseIcons[index]}?v=${courseIconVersion}" alt="" />`;
