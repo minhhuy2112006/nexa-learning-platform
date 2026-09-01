@@ -179,3 +179,22 @@
 .resource-note-caption > span { color: #aebbd2; }
 .resource-finished { display: flex; align-items: center; min-height: 12px; }
 .resource-finished > b { color: #79e7ad !important; font-size: 8px; }
+/* Compact utility panels for the right Library column. */
+.library-notes-panel,
+.library-recent-panel {
+  border: 1px solid #526ac2;
+  border-radius: 10px;
+  padding: 10px;
+  background: radial-gradient(circle at 18% 0%, #744fe238, transparent 43%), linear-gradient(145deg, #1b2d61, #111d45);
+}
+
+.library-recent-panel header { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding-bottom: 7px; }
+.library-recent-panel h2 { margin: 0; color: #f1f4ff; font-size: 11px; }
+.library-recent-panel header button { border: 0; padding: 0; background: transparent; color: #be7cff; font-size: 9px; cursor: pointer; }
+.library-recent-panel > button { display: grid; grid-template-columns: 25px minmax(0, 1fr); gap: 7px; width: 100%; border: 0; border-top: 1px solid #304b92; padding: 8px 0; background: transparent; color: #dfe7f9; text-align: left; cursor: pointer; }
+.library-recent-panel > button i { display: grid; place-items: center; width: 23px; height: 23px; border: 1px solid #536ac2; border-radius: 5px; color: #ad9eff; font: 700 6px Inter, sans-serif; font-style: normal; }
+.library-recent-panel > button b,
+.library-recent-panel > button small { display: block; }
+.library-recent-panel > button b { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 8px; }
+.library-recent-panel > button small { margin-top: 2px; color: #91a5ca; font-size: 7px; }
+.library-side-panel .library-notes-panel > button { padding: 8px 0; }
