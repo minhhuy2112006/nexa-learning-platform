@@ -1,0 +1,87 @@
+/* Align full-screen product header and secondary sidebars. */
+.product-shell {
+  position: relative;
+}
+
+.product-sidebar {
+  position: relative;
+  z-index: 4;
+}
+
+.side-footer {
+  margin-right: 176px;
+}
+
+.product-top {
+  position: absolute;
+  top: 0;
+  right: 16px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 162px;
+  height: 49px;
+  margin: 0;
+}
+
+.back-landing,
+.student-pill {
+  position: static;
+  top: auto;
+  right: auto;
+}
+
+.back-landing {
+  margin-right: 14px;
+  white-space: nowrap;
+}
+
+.student-pill {
+  white-space: nowrap;
+}
+
+.module-layout {
+  grid-template-columns: 198px minmax(0, 1fr);
+  min-height: calc(100vh - 49px);
+}
+
+.module-sidebar {
+  min-height: calc(100vh - 49px);
+  margin: 0;
+  padding: 17px 10px;
+}
+
+.module-layout > .product-view {
+  padding: 19px 38px 34px;
+}
+
+@media (max-width: 1100px) {
+  .side-footer {
+    margin-right: 150px;
+  }
+
+  .product-sidebar .brand {
+    margin-right: 16px;
+  }
+
+  .product-sidebar button {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+}
+
+@media (max-width: 900px) {
+  .side-footer,
+  .product-top {
+    display: none;
+  }
+
+  .module-sidebar {
+    min-height: auto;
+  }
+
+  .module-layout > .product-view {
+    padding: 0;
+  }
+}

@@ -1,0 +1,5 @@
+snapshots/
+im/
+step-1-frozen/
+node_modules/
+*.log

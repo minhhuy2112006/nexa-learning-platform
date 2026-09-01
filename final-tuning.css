@@ -1,0 +1,179 @@
+/* Highest-priority visual refinements. */
+.landing-hero {
+  padding-top: 0;
+  padding-bottom: 54px;
+}
+
+.hero-copy {
+  transform: translateY(-42px);
+}
+
+.hero-copy .eyebrow {
+  margin-bottom: 26px;
+  font-size: 20px;
+}
+
+.hero-copy .eyebrow i {
+  width: 18px;
+  height: 18px;
+  margin-right: 17px;
+}
+
+.hero-copy h1 {
+  margin-bottom: 30px;
+  font-size: clamp(66px, 5.4vw, 87px);
+  line-height: 1.08;
+}
+
+.hero-copy > p {
+  max-width: 760px;
+  font-size: 27px;
+  line-height: 1.48;
+}
+
+.hero-actions {
+  gap: 26px;
+  margin-top: 38px;
+}
+
+.hero-actions .btn {
+  min-width: 270px;
+  min-height: 76px;
+  font-size: 23px;
+}
+
+/* AI processing belongs exclusively to the post-submit screen. */
+.upload-card > .processing {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .hero-copy {
+    transform: translateY(-12px);
+  }
+
+  .hero-copy .eyebrow {
+    font-size: 14px;
+  }
+
+  .hero-copy h1 {
+    font-size: 52px;
+  }
+
+  .hero-copy > p {
+    font-size: 18px;
+  }
+
+  .hero-actions .btn {
+    min-width: 0;
+    min-height: 54px;
+    font-size: 16px;
+  }
+}
+
+/* Balanced 1.2× hero scale and compact upload controls. */
+.hero-copy .eyebrow {
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+.hero-copy .eyebrow i {
+  width: 13px;
+  height: 13px;
+  margin-right: 11px;
+}
+
+.hero-copy h1 {
+  margin-bottom: 20px;
+  font-size: clamp(39px, 3.25vw, 52px);
+  line-height: 1.12;
+}
+
+.hero-copy > p {
+  max-width: 640px;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.hero-actions {
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.hero-actions .btn {
+  min-width: 190px;
+  min-height: 56px;
+  font-size: 16px;
+}
+
+.workflow-card.upload-card {
+  min-height: 0;
+}
+
+.upload-card .upload-grid {
+  margin-top: 18px;
+}
+
+.upload-card .dropzone {
+  min-height: 258px;
+  padding: 22px;
+}
+
+.upload-card .file-button {
+  margin-top: 16px;
+}
+
+.upload-card .file-item {
+  margin-top: 26px;
+}
+
+.upload-card .upload-progress {
+  margin-top: 12px;
+}
+
+.upload-card .file-item,
+.upload-card .upload-progress {
+  display: none;
+}
+
+.upload-card .dropzone.has-file .file-item {
+  display: flex;
+}
+
+.upload-card .dropzone.has-file .upload-progress {
+  display: block;
+}
+
+.upload-card footer {
+  margin-top: 24px;
+  padding-top: 0;
+}
+
+/* Compact interests step: skip remains in the footer only. */
+.interests-card .step-count {
+  display: none;
+}
+
+.workflow-card.interests-card {
+  min-height: 0;
+}
+
+.interests-card footer {
+  margin-top: 28px;
+  padding-top: 0;
+}
+
+@media (max-width: 900px) {
+  .hero-copy h1 {
+    font-size: 42px;
+  }
+
+  .hero-copy > p {
+    font-size: 16px;
+  }
+
+  .hero-actions .btn {
+    min-height: 52px;
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,368 @@
+/* Reference dashboard: fixed, dense desktop working surface. */
+.ref-home { position: relative; display: flex; min-height: calc(100vh - 64px); box-sizing: border-box; flex-direction: column; gap: 14px; padding: 26px 32px 24px; overflow: hidden; }
+.ref-home .ref-greeting { flex: 0 0 52px; }
+.ref-home .ref-greeting h1 { margin: 0; font-size: 25px; letter-spacing: -.035em; }
+.ref-home .ref-greeting p { margin: 5px 0 0; color: #a8b6cf; font-size: 13px; }
+.nexa-ai-widget { position: absolute; top: 24px; left: 380px; z-index: 8; display: flex; align-items: center; padding: 7px; border-radius: 999px; cursor: grab; touch-action: none; user-select: none; }
+.nexa-ai-widget.dragging { cursor: grabbing; }
+.ai-online-label { max-width: 0; overflow: hidden; opacity: 0; color: #c4c7ff; white-space: nowrap; font-size: 11px; transition: max-width .28s ease, opacity .2s ease, margin .28s ease; }
+.nexa-ai-widget:hover .ai-online-label, .nexa-ai-widget:focus-visible .ai-online-label, .nexa-ai-widget.dragging .ai-online-label { max-width: 150px; margin-left: 7px; opacity: 1; }
+.nexa-ai-widget:hover, .nexa-ai-widget:focus-visible { outline: none; background: linear-gradient(90deg,#292063d9,#14245ad9); box-shadow: 0 0 24px #624eff77; }
+.ai-orb { display: grid; width: 40px; height: 40px; flex: 0 0 40px; place-items: center; border: 1px solid #927dff; border-radius: 50%; background: radial-gradient(circle at 48% 45%,#b9b0ff 0 5%,#674ff0 16%,#251679 48%,#101541 69%); box-shadow: 0 0 0 5px #5c4ee730, 0 0 24px #6955ffcc; color: #fff; font-size: 17px; animation: ai-orb-pulse 2.1s ease-in-out infinite; }
+@keyframes ai-orb-pulse { 50% { box-shadow: 0 0 0 9px #5c4ee71a, 0 0 31px #6955ffff; transform: scale(1.06); } }
+.home-dashboard-top { display: grid; grid-template-columns: 1.3fr .95fr 1fr; gap: 13px; height: 280px; }
+.home-dashboard-bottom { display: grid; grid-template-columns: 1.62fr .94fr; flex: 1 1 auto; min-height: 300px; gap: 14px; }
+.ref-home .dashboard-panel { border: 1px solid #2b3c61; border-radius: 10px; background: linear-gradient(145deg,#101d36e8,#0d1729e8); box-shadow: inset 0 1px #6070a515, 0 10px 28px #02081645; transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease; }
+.ref-home .dashboard-panel:hover { z-index: 2; border-color: #7764f7; box-shadow: inset 0 1px #8893ff46, 0 0 27px #5947d348, 0 14px 32px #01040b70; transform: translateY(-3px); }
+.ref-home .dashboard-panel header { display: flex; align-items: center; justify-content: space-between; min-height: 48px; padding: 0 16px; border-bottom: 1px solid #263653; }
+.ref-home .dashboard-panel h2 { display: flex; align-items: center; gap: 9px; margin: 0; color: #e8ecff; font-size: 13px; font-weight: 700; }
+.ref-home .dashboard-panel h2 > i { display: grid; width: 25px; height: 25px; place-items: center; border: 1px solid #6859e8; border-radius: 7px; background: #242065; color: #c5baff; font-style: normal; }
+.home-progress { padding-bottom: 14px; }
+.home-progress header { border: 0!important; }
+.live-status { color: #d3e9ff; font-size: 12px; }.live-status::first-letter { color: #62e1ad; }
+.progress-metrics { display: grid; grid-template-columns: repeat(4,1fr); gap: 7px; padding: 0 15px; }
+.progress-metrics article { min-height: 112px; padding: 12px; border: 1px solid #304168; border-radius: 7px; background: #111d34; transition: background .2s, transform .2s, border-color .2s; }
+.progress-metrics article:hover, .reference-course-grid button:hover, .home-plan button:hover, .home-deadlines button:hover { border-color: #795fff; background: #17234a; transform: translateY(-2px); }
+.metric-icon { display: grid; width: 31px; height: 31px; place-items: center; border-radius: 8px; color: white; font-size: 19px; font-style: normal; }.metric-icon.book{background:#4a27c5}.metric-icon.clock{background:#5740ed}.metric-icon.target{background:#9f2cdb}.metric-icon.fire{background:#b83d35}
+.progress-metrics b,.progress-metrics span,.progress-metrics small { display: block; }.progress-metrics b { margin-top: 8px; color: #fff; font-size: 20px; }.progress-metrics b em { font-size: 12px; font-style: normal; }.progress-metrics span { margin-top: 9px; color: #c9d1e6; font-size: 11px; }.progress-metrics small { margin-top: 10px; color: #8daaa3; font-size: 9px; }
+.xp-progress { display: grid; grid-template-columns: 52px 1fr 53px; align-items: center; gap: 10px; margin: 13px 15px 0; padding: 9px 12px; border: 1px solid #39466e; border-radius: 7px; background: linear-gradient(100deg,#1a1760,#111e3a); }.xp-progress>i { display:grid; width:43px; height:43px; place-items:center; border:1px solid #916dff; border-radius:11px; color:#e1dbff; font-size:10px; font-style:normal; }.xp-progress>i b{font-size:16px;}.xp-progress span,.xp-progress small{display:block;}.xp-progress span{font-size:10px;color:#aeb9d5}.xp-progress small{margin-top:3px;font-size:9px;color:#8192b7}.xp-progress p{height:5px;margin:8px 0 0;border-radius:8px;background:#243656;overflow:hidden}.xp-progress p b{display:block;width:78%;height:100%;border-radius:inherit;background:linear-gradient(90deg,#8f56ff,#68d8ff);box-shadow:0 0 9px #705fff}.xp-progress strong{font-size:18px;color:#ddd9ff;text-align:right}.xp-progress strong small{font-size:8px;color:#94a2be;font-weight:400}
+.home-plan button { display:grid; grid-template-columns:28px 1fr auto; width:calc(100% - 28px); margin:0 14px; padding:14px 0; align-items:center; gap:10px; border:0; border-bottom:1px solid #263653; background:transparent; color:#e7ebf7; text-align:left; cursor:pointer; transition:.2s; }.home-plan button i{display:grid;width:26px;height:26px;place-items:center;border:1px solid #6361cc;border-radius:6px;background:#1d2056;color:#c9c5ff;font-style:normal}.home-plan button span{font-size:12px;font-weight:600}.home-plan button small{margin-left:9px;padding:4px 6px;border-radius:4px;background:#162644;color:#aab8d2;font-size:9px;font-weight:400}.home-plan button em{color:#a9b6cf;font-size:10px;font-style:normal}.home-plan>a,.home-deadlines>a{display:inline-block;margin:14px 20px;color:#a797ff;font-size:12px;cursor:pointer}.home-plan header>span{color:#b9b1ff;font-size:10px}.home-plan header>span b{display:inline-block;width:105px;height:5px;margin-left:8px;border-radius:8px;background:#2c3857;vertical-align:middle}.home-plan header>span b em{display:block;width:66%;height:100%;border-radius:inherit;background:#9264ff}
+.home-calendar h3{margin:16px 18px 11px;font-size:14px}.home-calendar header>span{color:#c2ccdd;font-size:10px}.home-calendar-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:10px 4px;padding:0 18px 14px;text-align:center}.home-calendar-grid b{color:#d5dbea;font-size:10px}.home-calendar-grid span{color:#dfe5f1;font-size:11px}.home-calendar-grid .dim{color:#62728e}.home-calendar-grid .today{display:grid;width:30px;height:30px;margin:-9px auto -9px;place-items:center;border-radius:50%;background:#6547ec;box-shadow:0 0 14px #7059ed;color:#fff}
+.home-continue header>span{color:#aeb9d3;font-size:10px}.home-continue header>span em{margin:0 8px;padding:4px 6px;border-radius:5px;background:#242654;color:#c9c4ff;font-style:normal}.home-continue header>span>b{display:inline-block;width:86px;height:5px;border-radius:6px;background:#293957;vertical-align:middle}.home-continue header>span>b i{display:block;width:62%;height:100%;border-radius:inherit;background:#8e5aff}.reference-course-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:14px 16px 16px}.reference-course-grid button{position:relative;min-height:198px;padding:19px 16px;border:1px solid #293c62;border-radius:7px;background:linear-gradient(145deg,#14254b,#101b31);color:#ecf0fc;text-align:left;cursor:pointer;transition:.2s}.reference-course-icon{display:grid;width:47px;height:47px;place-items:center;border-radius:8px;color:#e5e3ff;background:linear-gradient(145deg,#653cff,#293ee0);font-size:25px;font-style:normal}.reference-course-grid b,.reference-course-grid small{display:block}.reference-course-grid b{margin-top:17px;font-size:16px;line-height:1.25}.reference-course-grid small{margin-top:12px;color:#a395ce;font-size:12px}.reference-course-grid button>span{position:absolute;right:45px;bottom:28px;left:16px;height:5px;border-radius:6px;background:#283955;overflow:hidden}.reference-course-grid button>span em{display:block;height:100%;border-radius:inherit;background:#7d56ff}.reference-course-grid strong{position:absolute;right:16px;bottom:22px;color:#c6c0ff;font-size:12px}
+.home-deadlines button{display:grid;grid-template-columns:38px 1fr auto;align-items:center;gap:11px;width:calc(100% - 24px);margin:10px 12px;padding:11px;border:1px solid #263956;border-radius:7px;background:#111c31;color:#eef1fb;text-align:left;cursor:pointer;transition:.2s}.deadline-icon{display:grid;width:31px;height:31px;place-items:center;border-radius:7px;color:#fff;font-size:16px;font-style:normal}.deadline-icon.red{background:#b93f3b}.deadline-icon.orange{background:#b46a28}.deadline-icon.blue{background:#286ee3}.home-deadlines button b,.home-deadlines button small{display:block}.home-deadlines button b{font-size:13px}.home-deadlines button span small{margin-top:4px;color:#9eacc5;font-size:11px}.home-deadlines button>em{color:#c2cbe0;font-size:11px;font-style:normal;text-align:right}.home-deadlines button>em small{margin-top:5px;color:#a0afd0;font-size:10px}.home-deadlines button:first-of-type>em small{color:#ff7f86}.spark{color:#a492ff;font-size:22px;filter:drop-shadow(0 0 9px #7157ff)}
+@media (max-width: 1100px) { .ref-home{padding:20px 22px}.home-dashboard-top{grid-template-columns:1.2fr .9fr .9fr}.reference-course-grid{gap:8px;padding:12px}.reference-course-grid button{min-height:178px;padding:14px}.reference-course-grid b{font-size:14px}.progress-metrics article{padding:9px}.home-deadlines button{padding:9px} }
+@media (max-width: 900px) { .ref-home{overflow:visible}.home-dashboard-top,.home-dashboard-bottom{height:auto;grid-template-columns:1fr}.nexa-ai-widget{display:none}.reference-course-grid{grid-template-columns:repeat(2,1fr)} }
+
+/* Keep the complete Home dashboard within one desktop viewport. */
+@media (min-width: 901px) {
+  .ref-home {
+    height: calc(100vh - 64px);
+    min-height: 0;
+    gap: 10px;
+    padding: 14px 28px 16px;
+  }
+
+  .ref-home .ref-greeting { flex-basis: 40px; }
+  .ref-home .ref-greeting h1 { font-size: 23px; }
+  .ref-home .ref-greeting p { margin-top: 3px; font-size: 12px; }
+
+  .nexa-ai-widget { top: 9px; left: 365px; }
+  .ai-orb { width: 34px; height: 34px; flex-basis: 34px; font-size: 14px; }
+
+  .home-dashboard-top { height: 235px; gap: 11px; }
+  .home-dashboard-bottom { min-height: 0; gap: 12px; }
+  .ref-home .dashboard-panel header { min-height: 40px; padding: 0 13px; }
+  .ref-home .dashboard-panel h2 { gap: 7px; font-size: 11px; }
+  .ref-home .dashboard-panel h2 > i { width: 21px; height: 21px; font-size: 12px; }
+
+  .home-progress { padding-bottom: 9px; }
+  .progress-metrics { gap: 6px; padding: 0 11px; }
+  .progress-metrics article { min-height: 80px; padding: 8px; }
+  .metric-icon { width: 25px; height: 25px; border-radius: 6px; font-size: 15px; }
+  .progress-metrics b { margin-top: 5px; font-size: 16px; }
+  .progress-metrics b em { font-size: 10px; }
+  .progress-metrics span { margin-top: 5px; font-size: 9px; }
+  .progress-metrics small { margin-top: 6px; font-size: 8px; }
+  .xp-progress { grid-template-columns: 42px 1fr 43px; gap: 7px; margin: 9px 11px 0; padding: 6px 9px; }
+  .xp-progress > i { width: 34px; height: 34px; border-radius: 9px; font-size: 8px; }
+  .xp-progress > i b { font-size: 13px; }
+  .xp-progress p { margin-top: 5px; }
+  .xp-progress strong { font-size: 15px; }
+
+  .home-plan button { width: calc(100% - 22px); margin: 0 11px; padding: 10px 0; gap: 7px; }
+  .home-plan button i { width: 21px; height: 21px; font-size: 11px; }
+  .home-plan button span { font-size: 10px; }
+  .home-plan button small { margin-left: 5px; padding: 3px 4px; font-size: 8px; }
+  .home-plan button em { font-size: 9px; }
+  .home-plan > a, .home-deadlines > a { margin: 10px 15px; font-size: 10px; }
+  .home-plan header > span { font-size: 9px; }
+  .home-plan header > span b { width: 72px; }
+
+  .home-calendar h3 { margin: 11px 14px 8px; font-size: 12px; }
+  .home-calendar header > span { font-size: 9px; }
+  .home-calendar-grid { gap: 7px 3px; padding: 0 14px 10px; }
+  .home-calendar-grid b { font-size: 9px; }
+  .home-calendar-grid span { font-size: 10px; }
+  .home-calendar-grid .today { width: 24px; height: 24px; margin: -7px auto; }
+
+  .reference-course-grid { gap: 9px; padding: 10px 12px 12px; }
+  .reference-course-grid button { min-height: 142px; padding: 12px; }
+  .reference-course-icon { width: 34px; height: 34px; border-radius: 6px; font-size: 18px; }
+  .reference-course-grid b { margin-top: 10px; font-size: 13px; }
+  .reference-course-grid small { margin-top: 7px; font-size: 10px; }
+  .reference-course-grid button > span { right: 35px; bottom: 17px; left: 12px; height: 4px; }
+  .reference-course-grid strong { right: 12px; bottom: 13px; font-size: 10px; }
+  .home-continue header > span { font-size: 9px; }
+  .home-continue header > span b { width: 66px; }
+
+  .home-deadlines button { grid-template-columns: 31px 1fr auto; gap: 8px; width: calc(100% - 20px); margin: 7px 10px; padding: 8px; }
+  .deadline-icon { width: 25px; height: 25px; border-radius: 6px; font-size: 13px; }
+  .home-deadlines button b { font-size: 11px; }
+  .home-deadlines button span small { margin-top: 2px; font-size: 9px; }
+  .home-deadlines button > em { font-size: 9px; }
+  .home-deadlines button > em small { margin-top: 3px; font-size: 8px; }
+}
+
+/* Final Home density, neon palette, and interactive AI technical support. */
+@media (min-width: 901px) {
+  .ref-home {
+    background: radial-gradient(circle at 12% 5%, #4c20c329, transparent 28%), radial-gradient(circle at 83% 18%, #254ce530, transparent 24%);
+  }
+  .ref-home .dashboard-panel {
+    background: radial-gradient(circle at 14% 0%, #5134bc2c, transparent 35%), linear-gradient(145deg, #142251f0, #0b1733f2) !important;
+    border-color: #384984;
+  }
+  .home-dashboard-top { height: 245px; }
+
+  .progress-metrics { padding: 0 13px; gap: 8px; }
+  .progress-metrics article {
+    display: grid;
+    min-height: 86px;
+    grid-template-columns: 40px minmax(0, 1fr);
+    grid-template-rows: 42px auto auto;
+    column-gap: 10px;
+    padding: 10px 11px;
+  }
+  .metric-icon { grid-column: 1; grid-row: 1; width: 38px; height: 38px; }
+  .progress-metrics > article > b { grid-column: 2; grid-row: 1; align-self: center; margin: 0; color: #f3f4ff; font-size: 22px; line-height: 1; }
+  .progress-metrics > article > span { grid-column: 1 / -1; grid-row: 2; margin-top: 7px; color: #d5dafa; font-size: 11px; }
+  .progress-metrics > article > small { grid-column: 1 / -1; grid-row: 3; margin-top: 7px; color: #b8c5dc; font-size: 10px; }
+  .progress-metrics > article > small b { color: #58e6a5; font-size: inherit; }
+  .metric-icon { background-size: 178px 133px !important; }
+  .metric-icon.book { background-position: -134px -49px !important; }
+  .metric-icon.clock { background-position: -91px -49px !important; }
+  .metric-icon.target { background-position: -49px -49px !important; }
+  .metric-icon.fire { background-position: -6px -49px !important; }
+
+  .xp-progress {
+    grid-template-columns: 70px minmax(0, 1fr) 126px;
+    min-height: 70px;
+    gap: 10px;
+    margin: 12px 13px 0;
+    padding: 7px 12px;
+  }
+  .xp-progress > i {
+    width: 60px;
+    height: 60px;
+    justify-self: center;
+    background: url('/reference-icons.png') -212px -10px / 282px 210px no-repeat !important;
+    animation: level-orbit 3.2s ease-in-out infinite;
+  }
+  .xp-progress > div > span { color: #d4d8ff; font-size: 11px; }
+  .xp-progress > div > small { color: #69dfff; font-size: 11px; }
+  .xp-progress > div > p { max-width: 250px; margin-top: 8px; }
+  .xp-progress strong { display: flex; align-items: baseline; justify-content: flex-end; gap: 7px; color: #d5caff; font-size: 21px; white-space: nowrap; }
+  .xp-progress strong small { display: inline; color: #d4d8ff; font-size: 11px; font-weight: 500; }
+  @keyframes level-orbit { 50% { filter: brightness(1.27) drop-shadow(0 0 9px #8c5cff); transform: translateY(-2px) rotate(2deg); } }
+
+  .home-plan { display: flex; flex-direction: column; }
+  .home-plan button { flex: 1 1 0; width: calc(100% - 28px); margin: 0 14px; padding: 11px 0; grid-template-columns: 34px minmax(0,1fr) auto; gap: 9px; }
+  .home-plan button i { width: 30px; height: 30px; }
+  .home-plan button span { font-size: 12px; }
+  .home-plan button small { margin-left: 7px; padding: 4px 6px; font-size: 9px; }
+  .home-plan button em { font-size: 10px; }
+  .home-plan > a { margin: 11px 18px 13px; font-size: 12px; }
+  .home-plan header > span { font-size: 11px; }
+  .home-plan header > span b { width: 90px; height: 6px; }
+
+  .calendar-controls { display: flex; align-items: center; gap: 9px; color: #d7ddf4; font-size: 12px; }
+  .calendar-controls b { display: grid; width: 18px; height: 18px; place-items: center; color: #eeeaff; font-size: 18px; font-weight: 400; line-height: 1; }
+
+  .home-continue h2 { font-size: 14px; }
+  .home-continue h2 > i { width: 28px !important; height: 28px !important; }
+  .reference-course-grid button { display: flex; flex-direction: column; align-items: center; }
+  .reference-course-icon { margin: 0 auto; width: 50px; height: 50px; }
+  .reference-course-grid button > b, .reference-course-grid button > small { width: 100%; text-align: center; }
+  .reference-course-grid button > span { right: 49px; bottom: 22px; left: 17px; }
+  .reference-course-grid strong { right: 16px; bottom: 17px; }
+
+  .spark { animation: deadline-spark 1.8s ease-in-out infinite; }
+  @keyframes deadline-spark { 50% { color: #fff; filter: drop-shadow(0 0 12px #9c7aff); transform: rotate(18deg) scale(1.24); } }
+}
+
+.nexa-ai-orb { position: absolute; top: 9px; left: 360px; z-index: 8; display: grid; width: 38px; height: 38px; padding: 0; place-items: center; border: 1px solid #a38aff; border-radius: 50%; background: radial-gradient(circle at 48% 45%, #c5c4ff 0 6%, #684cff 16%, #281576 49%, #0d123d 74%); box-shadow: 0 0 0 5px #604ae626, 0 0 22px #6e58ffcf; color: #fff; cursor: grab; font-size: 16px; touch-action: none; animation: ai-orb-pulse 2.2s ease-in-out infinite; }
+.nexa-ai-orb.is-dragging { cursor: grabbing; animation-play-state: paused; }
+.nexa-ai-chat { position: absolute; top: 54px; left: 330px; z-index: 12; display: none; width: 300px; overflow: hidden; border: 1px solid #7864fa; border-radius: 12px; background: linear-gradient(145deg, #152553fa, #0b1530fa); box-shadow: 0 17px 38px #040714d8, 0 0 28px #604cef66; }
+.nexa-ai-chat.is-open { display: block; animation: chat-in .2s ease both; }
+.nexa-ai-chat header { display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; border-bottom: 1px solid #344574; }
+.nexa-ai-chat header b, .nexa-ai-chat header small { display: block; }.nexa-ai-chat header b { color: #f1f2ff; font-size: 13px; }.nexa-ai-chat header small { margin-top: 3px; color: #a5b2d1; font-size: 10px; }.nexa-ai-chat header button { border: 0; background: transparent; color: #bdc8e4; font-size: 20px; cursor: pointer; }
+.nexa-ai-messages { display: grid; max-height: 190px; gap: 8px; padding: 12px; overflow: auto; }.nexa-ai-messages p { max-width: 88%; margin: 0; padding: 9px 10px; border-radius: 9px; color: #dce4f6; font-size: 11px; line-height: 1.45; }.nexa-ai-messages .ai-message { background: #202864; }.nexa-ai-messages .user-message { justify-self: end; background: #6045dc; color: #fff; }
+.nexa-ai-chat form { display: flex; gap: 7px; padding: 10px; border-top: 1px solid #344574; }.nexa-ai-chat input { min-width: 0; flex: 1; border: 1px solid #384b76; border-radius: 7px; outline: 0; background: #111d3b; padding: 8px; color: #fff; font: inherit; font-size: 10px; }.nexa-ai-chat form button { border: 0; border-radius: 7px; background: #6b50ed; padding: 0 10px; color: #fff; font-size: 10px; cursor: pointer; }
+@keyframes chat-in { from { opacity: 0; transform: translateY(-6px) scale(.97); } to { opacity: 1; transform: none; } }
+
+/* Individual supplied icon assets and corrected desktop spacing. */
+@media (min-width: 901px) {
+  .ref-home { gap: 14px; }
+  .home-dashboard-top { gap: 14px; min-height: 0; }
+  .home-dashboard-bottom { gap: 14px; min-height: 0; }
+  .home-dashboard-top > .dashboard-panel,
+  .home-dashboard-bottom > .dashboard-panel { min-height: 0; overflow: hidden; }
+
+  .ref-home .dashboard-panel h2 > i,
+  .metric-icon,
+  .home-plan button i,
+  .reference-course-icon,
+  .deadline-icon {
+    border: 0 !important;
+    background-color: transparent !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+  }
+  .home-progress h2 > i { background-image: url('/icon-progress.png') !important; }
+  .home-plan h2 > i { background-image: url('/icon-target.png') !important; }
+  .home-calendar h2 > i { background-image: url('/icon-calendar.png') !important; }
+  .home-continue h2 > i { background-image: url('/icon-book-ring.png') !important; }
+  .home-deadlines h2 > i { background-image: url('/icon-clock.png') !important; }
+  .metric-icon.book { background-image: url('/icon-book.png') !important; }
+  .metric-icon.clock { background-image: url('/icon-clock.png') !important; }
+  .metric-icon.target { background-image: url('/icon-task.png') !important; }
+  .metric-icon.fire { background-image: url('/icon-fire.png') !important; }
+  .home-plan button:nth-of-type(1) i { background-image: url('/icon-calendar.png') !important; }
+  .home-plan button:nth-of-type(2) i { background-image: url('/icon-target.png') !important; }
+  .home-plan button:nth-of-type(3) i { background-image: url('/icon-book.png') !important; }
+  .reference-course-grid button:nth-child(1) .reference-course-icon { background-image: url('/icon-book-ring.png') !important; }
+  .reference-course-grid button:nth-child(2) .reference-course-icon { background-image: url('/icon-target.png') !important; }
+  .reference-course-grid button:nth-child(3) .reference-course-icon { background-image: url('/icon-progress.png') !important; }
+  .reference-course-grid button:nth-child(4) .reference-course-icon { background-image: url('/icon-book.png') !important; }
+  .deadline-icon.red { background-image: url('/icon-target.png') !important; }
+  .deadline-icon.orange { background-image: url('/icon-fire.png') !important; }
+  .deadline-icon.blue { background-image: url('/icon-calendar.png') !important; }
+  .xp-progress > i { background: url('/icon-level.png') center / cover no-repeat !important; }
+
+  .nexa-ai-orb { background: url('/icon-orb.png') center / cover no-repeat !important; border: 0; color: transparent; }
+  .nexa-ai-chat { position: fixed; top: auto; right: 24px; bottom: 24px; left: auto; }
+}
+
+.product-shell .side-footer { position: absolute; right: 136px; margin: 0; gap: 12px; }
+.product-shell .student-pill { display: flex; align-items: center; gap: 10px; white-space: nowrap; font-size: 13px; }
+.product-shell .student-pill b { font-size: 15px; line-height: 1; }
+
+/* Use the supplied glowing icon sheet as Home's visual icon set. */
+.ref-home .dashboard-panel h2 > i::after,
+.metric-icon::after,
+.home-plan button i::after,
+.reference-course-icon::after,
+.deadline-icon::after { display: none !important; }
+.ref-home .dashboard-panel h2 > i,
+.metric-icon,
+.home-plan button i,
+.reference-course-icon,
+.deadline-icon {
+  background-image: url('/reference-icons.png') !important;
+  background-repeat: no-repeat !important;
+  color: transparent !important;
+}
+.ref-home .dashboard-panel h2 > i,
+.home-plan button i { background-size: 98px 73px !important; }
+.home-progress h2 > i { background-position: -15px -50px !important; }
+.home-plan h2 > i { background-position: -27px -4px !important; }
+.home-calendar h2 > i { background-position: -3px -4px !important; }
+.home-continue h2 > i { background-position: -39px -50px !important; }
+.home-deadlines h2 > i { background-position: -62px -50px !important; }
+.home-plan button:nth-of-type(1) i { background-position: -3px -4px !important; }
+.home-plan button:nth-of-type(2) i { background-position: -27px -4px !important; }
+.home-plan button:nth-of-type(3) i { background-position: -74px -27px !important; }
+.metric-icon,
+.deadline-icon { background-size: 117px 87px !important; }
+.metric-icon.book { background-position: -88px -32px !important; }
+.metric-icon.clock { background-position: -60px -32px !important; }
+.metric-icon.target { background-position: -32px -32px !important; }
+.metric-icon.fire { background-position: -4px -32px !important; }
+.reference-course-icon { background-size: 216px 161px !important; }
+.reference-course-grid button:nth-child(1) .reference-course-icon { background-position: -85px -110px !important; }
+.reference-course-grid button:nth-child(2) .reference-course-icon { background-position: -59px -8px !important; }
+.reference-course-grid button:nth-child(3) .reference-course-icon { background-position: -7px -8px !important; }
+.reference-course-grid button:nth-child(4) .reference-course-icon { background-position: -137px -110px !important; }
+.deadline-icon.red { background-position: -32px -32px !important; }
+.deadline-icon.orange { background-position: -4px -32px !important; }
+.deadline-icon.blue { background-position: -88px -32px !important; }
+.xp-progress > i { background: url('/reference-icons.png') -120px -6px / 160px 119px no-repeat !important; color: transparent; }
+.xp-progress > i b { display: none; }
+
+/* Crisp Home icons based on the supplied icon set. */
+.ai-online-label { display: none !important; }
+.nexa-ai-widget:hover, .nexa-ai-widget:focus-visible { background: transparent; box-shadow: none; }
+.ref-home .dashboard-panel h2 > i,
+.metric-icon,
+.home-plan button i,
+.reference-course-icon,
+.deadline-icon { font-size: 0 !important; }
+.ref-home .dashboard-panel h2 > i::after,
+.metric-icon::after,
+.home-plan button i::after,
+.reference-course-icon::after,
+.deadline-icon::after { content: ''; display: block; width: 62%; height: 62%; background: currentColor; -webkit-mask: var(--home-icon) center / contain no-repeat; mask: var(--home-icon) center / contain no-repeat; }
+.home-progress h2 > i { --home-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M3 12h3l2-6 4 12 2-6h7' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+.home-plan h2 > i { --home-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='8' fill='none' stroke='black' stroke-width='2'/%3E%3Ccircle cx='12' cy='12' r='3' fill='none' stroke='black' stroke-width='2'/%3E%3Cpath d='m16 8 4-4' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E"); }
+.home-calendar h2 > i { --home-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='3' y='5' width='18' height='16' rx='2' fill='none' stroke='black' stroke-width='2'/%3E%3Cpath d='M7 3v4M17 3v4M3 10h18' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E"); }
+.home-continue h2 > i { --home-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 5h13a3 3 0 0 1 3 3v11H7a3 3 0 0 0-3 3Z' fill='none' stroke='black' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M7 5v17' fill='none' stroke='black' stroke-width='2'/%3E%3C/svg%3E"); }
+.home-deadlines h2 > i { --home-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='8' fill='none' stroke='black' stroke-width='2'/%3E%3Cpath d='M12 7v5l3 2' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E"); }
+.metric-icon.book { --home-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M3 5h7a3 3 0 0 1 3 3v11a3 3 0 0 0-3-3H3Z M21 5h-7a3 3 0 0 0-3 3v11a3 3 0 0 1 3-3h7Z' fill='none' stroke='black' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E"); }.metric-icon.clock { --home-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='8' fill='none' stroke='black' stroke-width='2'/%3E%3Cpath d='M12 7v5l3 2' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E"); }.metric-icon.target { --home-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='8' fill='none' stroke='black' stroke-width='2'/%3E%3Ccircle cx='12' cy='12' r='3' fill='none' stroke='black' stroke-width='2'/%3E%3C/svg%3E"); }.metric-icon.fire { --home-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3c2 4-1 5 1 8 1-2 3-3 3-5 4 4 5 11 0 15-5 3-11-1-9-7 1-3 3-4 4-7 1 2 2 3 1 5 2-2 2-5 0-9Z' fill='none' stroke='black' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+.home-plan button:nth-of-type(1) i { --home-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='4' y='3' width='16' height='18' rx='2' fill='none' stroke='black' stroke-width='2'/%3E%3Cpath d='M8 3v4M16 3v4M8 11h8M8 15h5' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E"); }.home-plan button:nth-of-type(2) i { --home-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='3' y='5' width='18' height='14' rx='2' fill='none' stroke='black' stroke-width='2'/%3E%3Cpath d='m10 9 5 3-5 3Z' fill='black'/%3E%3C/svg%3E"); }.home-plan button:nth-of-type(3) i { --home-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cellipse cx='12' cy='5' rx='7' ry='3' fill='none' stroke='black' stroke-width='2'/%3E%3Cpath d='M5 5v10c0 4 14 4 14 0V5M5 10c0 4 14 4 14 0' fill='none' stroke='black' stroke-width='2'/%3E%3C/svg%3E"); }
+.reference-course-grid button:nth-child(1) .reference-course-icon,.reference-course-grid button:nth-child(4) .reference-course-icon { --home-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cellipse cx='12' cy='5' rx='7' ry='3' fill='none' stroke='black' stroke-width='2'/%3E%3Cpath d='M5 5v10c0 4 14 4 14 0V5M5 10c0 4 14 4 14 0' fill='none' stroke='black' stroke-width='2'/%3E%3C/svg%3E"); }.reference-course-grid button:nth-child(2) .reference-course-icon { --home-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 5h7a3 3 0 0 1 3 3v11a3 3 0 0 0-3-3H4Z M20 5h-7a3 3 0 0 0-3 3v11a3 3 0 0 1 3-3h7Z' fill='none' stroke='black' stroke-width='2'/%3E%3C/svg%3E"); }.reference-course-grid button:nth-child(3) .reference-course-icon { --home-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 19V9M10 19V5M16 19v-7M22 19V3' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E"); }
+.deadline-icon.red { --home-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E"); }.deadline-icon.orange { --home-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 3v5l-5 10a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3l-5-10V3M8 13h8' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }.deadline-icon.blue { --home-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 3h8l4 4v14H6Z M14 3v5h4M9 14h6M9 18h6' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+
+/* Home calendar matched to the supplied compact calendar card. */
+.home-calendar {
+  border-color: #31446c !important;
+  background: radial-gradient(circle at 20% 0%, #1a2c5d55, transparent 56%), linear-gradient(145deg, #0e1a32, #091426) !important;
+}
+.home-calendar header { min-height: 47px !important; border-bottom: 0 !important; }
+.home-calendar h3 { margin: 0 14px 12px !important; color: #e7ebf7; font-size: 13px !important; }
+.home-calendar-grid { gap: 9px 4px !important; padding: 0 14px 14px !important; }
+.home-calendar-grid b { color: #d8dfef; font-size: 9px !important; font-weight: 600; }
+.home-calendar-grid span { color: #e1e6f2; font-size: 10px !important; }
+.home-calendar-grid .dim { color: #6f7d9c; }
+.home-calendar-grid .today { width: 27px !important; height: 27px !important; margin: -8px auto !important; background: linear-gradient(145deg, #754cff, #4925d8) !important; box-shadow: 0 0 15px #6949ffb8; }
+
+/* Rebalance the dashboard and let the course tabs fill their existing panel. */
+@media (min-width: 901px) {
+  .home-dashboard-top { grid-template-columns: 1.55fr .8fr .85fr; }
+
+  .home-continue {
+    display: grid;
+    min-height: 0;
+    grid-template-rows: 40px minmax(0, 1fr);
+  }
+
+  .home-continue > header { grid-row: 1; }
+
+  .reference-course-grid {
+    grid-row: 2;
+    min-height: 0;
+    height: auto;
+    padding: 12px 14px 14px;
+  }
+
+  .reference-course-grid button {
+    min-height: 0;
+    height: 100%;
+    padding: 17px 15px;
+  }
+
+  .reference-course-icon { width: 46px; height: 46px; border-radius: 8px; font-size: 22px; }
+  .reference-course-grid b { margin-top: 15px; font-size: 16px; }
+  .reference-course-grid small { margin-top: 9px; font-size: 12px; }
+  .reference-course-grid button > span { right: 42px; bottom: 22px; left: 15px; height: 5px; }
+  .reference-course-grid strong { right: 15px; bottom: 17px; font-size: 12px; }
+}
+
+/* Use the full card space for the calendar and the course-progress summary. */
+@media (min-width: 901px) {
+  .home-calendar { display: flex; flex-direction: column; }
+  .home-calendar > header { flex: 0 0 47px; }
+  .home-calendar h3 { flex: 0 0 auto; margin-bottom: 5px !important; }
+  .home-calendar-grid {
+    flex: 1 1 auto;
+    grid-template-rows: repeat(6, 1fr);
+    align-items: center;
+    gap: 0 4px !important;
+    padding: 0 15px 13px !important;
+  }
+
+  .home-continue { grid-template-rows: 48px minmax(0, 1fr); }
+  .home-continue header > span { font-size: 12px; }
+  .home-continue header > span em { margin: 0 10px; padding: 6px 9px; font-size: 12px; }
+  .home-continue header > span b { width: 104px; height: 8px; }
+}

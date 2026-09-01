@@ -1,0 +1,713 @@
+/* Landing-page fit and typography refinement */
+.landing-page.is-active {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.topbar {
+  height: 86px;
+}
+
+.topbar .brand {
+  font-size: 25px;
+}
+
+.topbar .brand-mark {
+  font-size: 45px;
+}
+
+.topbar .nav-links a,
+.topbar .btn-small {
+  font-size: 18px;
+}
+
+.landing-hero {
+  min-height: calc(100vh - 86px);
+  padding: 24px 4.1% 28px;
+}
+
+.landing-page .trusted {
+  display: none;
+}
+
+.hero-copy h1 {
+  font-size: clamp(43px, 4.25vw, 68px);
+  margin-bottom: 24px;
+}
+
+.hero-copy > p {
+  max-width: 600px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.hero-copy .eyebrow {
+  margin-bottom: 18px;
+  font-size: 13px;
+}
+
+.hero-actions {
+  margin-top: 30px;
+}
+
+.hero-actions .btn {
+  min-height: 52px;
+  min-width: 180px;
+  font-size: 15px;
+}
+
+.hero-visual {
+  height: 430px;
+  transform: scale(.88);
+  transform-origin: center;
+}
+
+@media (max-width: 900px) {
+  .landing-page.is-active {
+    height: auto;
+    overflow: visible;
+  }
+
+  .topbar .brand {
+    font-size: 21px;
+  }
+
+  .topbar .brand-mark {
+    font-size: 38px;
+  }
+
+  .landing-hero {
+    min-height: 0;
+  }
+
+  .hero-visual {
+    transform: scale(.82);
+    margin-top: 6px;
+  }
+}
+
+/* Refined sizing for the guided account-setup flow. */
+.centered-page.is-active {
+  padding: 28px;
+}
+
+.login-card {
+  width: min(430px, 100%);
+  padding: 28px;
+  border-radius: 14px;
+}
+
+.login-card .brand {
+  font-size: 22px;
+}
+
+.login-card .brand-mark {
+  font-size: 29px;
+}
+
+.login-card h1 {
+  margin-top: 38px;
+  font-size: 28px;
+}
+
+.login-card > p {
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.login-card > label {
+  gap: 8px;
+  margin: 16px 0;
+  font-size: 14px;
+}
+
+.login-card input {
+  height: 46px;
+  padding: 0 14px;
+  font-size: 14px;
+}
+
+.password-wrap i {
+  top: 14px;
+}
+
+.login-options {
+  margin: 22px 0;
+  font-size: 12px;
+}
+
+.check {
+  gap: 8px;
+  font-size: 12px;
+}
+
+.check input {
+  width: 16px;
+  height: 16px;
+}
+
+.login-card .full {
+  min-height: 46px;
+  font-size: 14px;
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 22px 0 14px;
+  color: #8190a8;
+  font-size: 12px;
+}
+
+.auth-divider:before,
+.auth-divider:after {
+  content: '';
+  height: 1px;
+  flex: 1;
+  background: var(--line);
+}
+
+.auth-methods {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.auth-button {
+  min-height: 42px;
+  border: 1px solid #34415b;
+  border-radius: 8px;
+  background: #111a2b;
+  color: #dbe4f2;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.auth-button b {
+  margin-right: 5px;
+  color: #a999ff;
+}
+
+.login-card .signup {
+  margin-top: 22px !important;
+  font-size: 12px !important;
+}
+
+.workflow-card.interests-card {
+  width: min(760px, 100%);
+  min-height: 530px;
+  padding: 32px 36px 28px;
+}
+
+.workflow-card.upload-card {
+  width: min(840px, 100%);
+  min-height: 560px;
+  padding: 32px 36px 28px;
+}
+
+.workflow-card h1,
+.upload-card h1 {
+  font-size: 28px;
+}
+
+.workflow-card .eyebrow {
+  margin-bottom: 12px;
+  font-size: 12px;
+}
+
+.stepper {
+  margin: 28px 0 26px;
+}
+
+.workflow-card h2,
+.processing h2 {
+  font-size: 20px;
+}
+
+.interest-list {
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.interest-list button {
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.workflow-card footer {
+  padding-top: 25px;
+}
+
+.workflow-card footer .btn {
+  min-width: 138px;
+  min-height: 44px;
+}
+
+.upload-grid {
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.dropzone {
+  min-height: 255px;
+  padding: 22px;
+  border-radius: 12px;
+}
+
+.dropzone h2 {
+  margin-top: 12px;
+  font-size: 16px;
+}
+
+.dropzone p,
+.file-item {
+  font-size: 13px;
+}
+
+.file-button {
+  margin-top: 18px;
+  padding: 8px 11px;
+  font-size: 13px;
+}
+
+.processing {
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.processing > div {
+  width: 80px;
+  height: 80px;
+  font-size: 28px;
+}
+
+.processing p,
+.processing ul {
+  font-size: 13px;
+}
+
+/* AI status screen shown immediately after document upload. */
+.processing-page.is-active {
+  display: grid;
+  min-height: 100vh;
+  padding: 28px;
+  place-items: center;
+}
+
+.processing-card {
+  position: relative;
+  width: min(650px, 100%);
+  min-height: 400px;
+  padding: 34px 38px 28px;
+  border: 1px solid #334260;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #101827, #090e19);
+}
+
+.processing-card h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.processing-card .eyebrow {
+  margin-bottom: 14px;
+  font-size: 12px;
+}
+
+.processing-card .subtitle {
+  font-size: 14px;
+}
+
+.processing-layout {
+  display: grid;
+  grid-template-columns: 1fr 180px;
+  align-items: center;
+  gap: 20px;
+  margin-top: 26px;
+}
+
+.process-list {
+  display: grid;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.process-item {
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  color: #b7c5dc;
+  font-size: 14px;
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.process-item i {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  border-radius: 50%;
+  color: #b7acff;
+  background: #262367;
+  font-size: 12px;
+  font-style: normal;
+}
+
+.is-running .process-item {
+  animation: reveal-step .4s ease forwards;
+}
+
+.is-running .process-item:nth-child(2) { animation-delay: .9s; }
+.is-running .process-item:nth-child(3) { animation-delay: 1.8s; }
+.is-running .process-item:nth-child(4) { animation-delay: 2.7s; }
+.is-running .process-item:nth-child(5) { animation-delay: 3.6s; }
+
+@keyframes reveal-step {
+  to { opacity: 1; transform: none; }
+}
+
+.processing-orbit {
+  position: relative;
+  width: 142px;
+  height: 142px;
+  border: 1px solid #5047c1;
+  border-radius: 50%;
+  box-shadow: inset 0 0 27px #4d40c63d, 0 0 25px #5b4dca45;
+}
+
+.processing-orbit i {
+  position: absolute;
+  inset: 14px;
+  border: 1px solid #685bdf;
+  border-radius: 50%;
+}
+
+.processing-orbit i:nth-child(2) {
+  inset: 31px;
+  border-color: #3dcfe3;
+}
+
+.processing-orbit b {
+  position: absolute;
+  inset: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: white;
+  background: radial-gradient(circle, #8d71ff, #35247e 60%, #10101e);
+  box-shadow: 0 0 22px #735cff;
+}
+
+.is-running .processing-orbit { animation: orbit-pulse 1.4s ease-in-out infinite; }
+.is-running .processing-orbit i:first-child { animation: orbit-spin 4s linear infinite; }
+.is-running .processing-orbit i:nth-child(2) { animation: orbit-spin 2.5s linear infinite reverse; }
+
+@keyframes orbit-spin { to { transform: rotate(360deg); } }
+@keyframes orbit-pulse { 50% { transform: scale(1.05); box-shadow: inset 0 0 32px #4d40c66c, 0 0 37px #5b4dca8c; } }
+
+.processing-finish {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  padding-top: 17px;
+  border-top: 1px solid #2c3953;
+  color: #8f9db7;
+  font-size: 12px;
+  opacity: .35;
+  transition: opacity .4s ease;
+}
+
+.processing-finish .btn {
+  min-height: 40px;
+  font-size: 13px;
+}
+
+.processing-card.is-complete .processing-finish { opacity: 1; }
+
+@media (max-width: 620px) {
+  .login-card,
+  .workflow-card.interests-card,
+  .workflow-card.upload-card,
+  .processing-card {
+    padding: 24px 20px;
+  }
+
+  .auth-methods,
+  .upload-grid,
+  .processing-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .processing-orbit {
+    margin: 0 auto;
+  }
+}
+
+/* Final landing and upload refinements. */
+.landing-hero {
+  padding-top: 0;
+  padding-bottom: 54px;
+}
+
+.hero-copy {
+  transform: translateY(-42px);
+}
+
+.hero-copy h1 {
+  font-size: clamp(44px, 3.6vw, 58px);
+  line-height: 1.08;
+  margin-bottom: 22px;
+}
+
+.hero-copy > p {
+  max-width: 640px;
+  font-size: 18px;
+}
+
+.hero-actions .btn {
+  min-height: 54px;
+  font-size: 16px;
+}
+
+.upload-card > header .eyebrow,
+.upload-card > header .secure {
+  display: none;
+}
+
+.upload-card > header {
+  justify-content: flex-start;
+}
+
+.upload-card > header h1 {
+  margin-top: 0;
+}
+
+@media (max-width: 900px) {
+  .hero-copy {
+    transform: translateY(-12px);
+  }
+
+  .hero-copy h1 {
+    font-size: 42px;
+  }
+}
+
+/* Enlarged landing hero and a clean upload-only stage. */
+.hero-copy .eyebrow {
+  font-size: 20px;
+  margin-bottom: 26px;
+}
+
+.hero-copy .eyebrow i {
+  width: 18px;
+  height: 18px;
+  margin-right: 17px;
+}
+
+.hero-copy h1 {
+  font-size: clamp(66px, 5.4vw, 87px);
+  margin-bottom: 30px;
+}
+
+.hero-copy > p {
+  max-width: 760px;
+  font-size: 27px;
+  line-height: 1.48;
+}
+
+.hero-actions {
+  gap: 26px;
+  margin-top: 38px;
+}
+
+.hero-actions .btn {
+  min-width: 270px;
+  min-height: 76px;
+  font-size: 23px;
+}
+
+.upload-card > .processing {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .hero-copy .eyebrow {
+    font-size: 14px;
+  }
+
+  .hero-copy h1 {
+    font-size: 52px;
+  }
+
+  .hero-copy > p {
+    font-size: 18px;
+  }
+
+  .hero-actions .btn {
+    min-width: 0;
+    min-height: 54px;
+    font-size: 16px;
+  }
+}
+
+/* NEXA typography scale — approved system */
+body,
+button,
+input,
+h1,
+h2,
+h3,
+.brand,
+.dashboard-grid b {
+  font-family: Inter, Arial, sans-serif;
+}
+
+body {
+  font-size: 14px;
+}
+
+.brand,
+.topbar .brand {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.brand-mark,
+.topbar .brand-mark {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.hero-copy h1 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.workflow-card h1,
+.dashboard-content h1,
+.login-card h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.workflow-card h2,
+.processing h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.dropzone h2,
+.dashboard-grid b {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.hero-copy > p,
+.subtitle,
+.dropzone p,
+.processing p,
+.dashboard-grid p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.eyebrow,
+.step-count,
+.dashboard-grid small,
+.file-item small,
+.secure .skip-link {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.btn,
+.hero-actions .btn,
+.topbar .btn-small {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.topbar .nav-links a {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Keep product screens as centred workspaces instead of full-bleed canvases. */
+.centered-page.is-active,
+.workflow-page {
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.login-card {
+  width: min(620px, 100%);
+  padding: 34px 30px 30px;
+}
+
+.login-card h1 {
+  margin-top: 44px;
+}
+
+.workflow-page.is-active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.workflow-card {
+  width: min(1080px, 100%);
+  min-height: 620px;
+  margin: 0;
+  padding: 38px 42px 32px;
+}
+
+.upload-card {
+  min-height: 720px;
+}
+
+.workflow-card footer {
+  padding-top: 36px;
+}
+
+.dashboard-page.is-active {
+  width: min(1180px, calc(100% - 48px));
+  min-height: 700px;
+  margin: 24px auto;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.dashboard-page aside {
+  min-height: 700px;
+}
+
+.dashboard-content {
+  padding: 42px;
+}
+
+@media (max-width: 900px) {
+  .centered-page.is-active,
+  .workflow-page {
+    padding: 16px;
+  }
+
+  .workflow-card,
+  .upload-card {
+    min-height: calc(100vh - 32px);
+  }
+
+  .dashboard-page.is-active {
+    width: calc(100% - 32px);
+    min-height: calc(100vh - 32px);
+    margin: 16px auto;
+  }
+}
