@@ -101,3 +101,43 @@
     min-height: 28px;
   }
 }
+/* Library uses the exact My Learning workspace palette. */
+.product-shell:has(.library-dashboard),
+.module-layout:has(.library-dashboard),
+.library-dashboard {
+  background:
+    radial-gradient(circle at 12% 5%, #4c20c329, transparent 28%),
+    radial-gradient(circle at 83% 18%, #254ce530, transparent 24%),
+    #0b1120 !important;
+}
+
+.library-header,
+.library-pagination { border-color: #263d69 !important; }
+
+.library-resource-card,
+.library-storage-panel,
+.library-upload-panel {
+  border-color: #526ac2 !important;
+  background: radial-gradient(circle at 18% 0%, #744fe238, transparent 43%), linear-gradient(145deg, #1b2d61, #111d45) !important;
+}
+
+.library-search,
+.library-select,
+.library-resource-card footer button,
+.library-storage-panel button,
+.library-upload-panel button,
+.resource-card-actions button {
+  border-color: #304168 !important;
+  background: #111d34 !important;
+}
+
+.library-resource-card footer button:first-child {
+  border-color: #526ac2 !important;
+  background: linear-gradient(145deg, #203869, #16264d) !important;
+}
+
+.library-type-filters button.active,
+.library-pagination button.active {
+  border-color: #8064ed !important;
+  background: linear-gradient(90deg, rgba(98, 59, 210, .65), rgba(74, 49, 170, .45)) !important;
+}
