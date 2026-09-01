@@ -66,3 +66,38 @@
 .resource-card-actions { top: 7px; right: 7px; }.library-resource-card { grid-template-columns: 72px minmax(0, 1fr); min-height: 172px; padding: 9px; }.resource-cover { min-height: 102px; padding: 7px; font-size: 10px; }.resource-cover small { margin-top: 5px; font-size: 6px; }.resource-copy { padding-right: 40px; }.resource-copy > b { font-size: 10px; line-height: 1.3; }.resource-copy > small { margin-top: 3px; font-size: 7px; }.resource-caption { margin: 6px 0 4px; color: #93a6c8; font-size: 7px; line-height: 1.35; }.resource-caption > span { display: block; }.resource-caption .resource-file { margin: 4px 0 0; color: #bdc9df; font-size: 7px; }.resource-caption .resource-file span { display: block; margin-top: 1px; color: #8194b8; }.resource-progress { gap: 3px; margin-top: auto; }.resource-progress > i { height: 5px; }.resource-progress > b { color: #c7bbff; font-size: 7px; }.library-resource-card footer { margin-top: -1px; }.library-resource-card footer button { min-height: 28px; }.library-resource-card footer button:first-child { padding: 0 8px; }
 .library-side-panel { gap: 8px; }.library-notes-panel { padding: 10px; }.library-notes-panel > button { padding: 8px 0; }.library-storage-panel { gap: 6px; padding: 10px; }.library-upload-panel { padding: 10px; }.library-upload-panel p { margin: 5px 0 8px; }.library-upload-panel > div { margin-bottom: 8px; }
 @media (min-width: 901px) { .library-resource-grid { gap: 8px; }.library-content-grid { gap: 10px; }.library-scroll-area .library-content-grid { padding-bottom: 6px; } }
+/* Desktop fit: two complete resource rows above pagination, with no partial card edge. */
+@media (min-width: 901px) {
+  .library-resource-grid {
+    align-content: start;
+    grid-auto-rows: 182px;
+  }
+
+  .library-resource-card {
+    box-sizing: border-box;
+    grid-template-rows: minmax(0, 1fr) 28px;
+    height: 182px;
+    min-height: 182px;
+    max-height: 182px;
+    overflow: hidden;
+  }
+
+  .resource-cover,
+  .resource-copy {
+    min-height: 0;
+  }
+
+  .resource-cover { height: 100%; }
+  .resource-copy { overflow: hidden; }
+
+  .library-resource-card footer {
+    height: 28px;
+    min-height: 28px;
+    align-self: stretch;
+  }
+
+  .library-resource-card footer button {
+    height: 28px;
+    min-height: 28px;
+  }
+}
