@@ -254,3 +254,5 @@
 }
 /* Compensate the visual centre of the CSS triangle within the control. */
 .library-select span::before { transform: translateY(4px); }
+/* Reserve a fixed action lane so resource titles never run below the two top-right controls. */
+.library-resource-card .resource-copy { padding-right: 60px; }
