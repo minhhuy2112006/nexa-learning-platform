@@ -26,22 +26,22 @@
   display: none !important;
 }
 
-.ref-home .home-progress h2 > i { background-image: url('/icon-progress.png') !important; }
-.ref-home .home-plan h2 > i { background-image: url('/icon-target.png') !important; }
-.ref-home .home-calendar h2 > i { background-image: url('/icon-calendar.png') !important; }
-.ref-home .home-continue h2 > i { background-image: url('/icon-book-ring.png') !important; }
-.ref-home .home-deadlines h2 > i { background-image: url('/icon-clock.png') !important; }
-.ref-home .metric:nth-child(1) .metric-icon { background-image: url('/icon-book.png') !important; }
-.ref-home .metric:nth-child(2) .metric-icon { background-image: url('/icon-clock.png') !important; }
-.ref-home .metric:nth-child(3) .metric-icon { background-image: url('/icon-task.png') !important; }
-.ref-home .metric:nth-child(4) .metric-icon { background-image: url('/icon-fire.png') !important; }
-.ref-home .home-plan button:nth-of-type(1) i { background-image: url('/icon-calendar.png') !important; }
-.ref-home .home-plan button:nth-of-type(2) i { background-image: url('/icon-target.png') !important; }
-.ref-home .home-plan button:nth-of-type(3) i { background-image: url('/icon-book.png') !important; }
-.ref-home .reference-course-grid button:nth-of-type(1) .reference-course-icon { background-image: url('/icon-book-ring.png') !important; }
-.ref-home .reference-course-grid button:nth-of-type(2) .reference-course-icon { background-image: url('/icon-target.png') !important; }
-.ref-home .reference-course-grid button:nth-of-type(3) .reference-course-icon { background-image: url('/icon-progress.png') !important; }
-.ref-home .reference-course-grid button:nth-of-type(4) .reference-course-icon { background-image: url('/icon-book.png') !important; }
+.ref-home .home-progress h2 > i { background-image: url('icon-progress.png') !important; }
+.ref-home .home-plan h2 > i { background-image: url('icon-target.png') !important; }
+.ref-home .home-calendar h2 > i { background-image: url('icon-calendar.png') !important; }
+.ref-home .home-continue h2 > i { background-image: url('icon-book-ring.png') !important; }
+.ref-home .home-deadlines h2 > i { background-image: url('icon-clock.png') !important; }
+.ref-home .metric:nth-child(1) .metric-icon { background-image: url('icon-book.png') !important; }
+.ref-home .metric:nth-child(2) .metric-icon { background-image: url('icon-clock.png') !important; }
+.ref-home .metric:nth-child(3) .metric-icon { background-image: url('icon-task.png') !important; }
+.ref-home .metric:nth-child(4) .metric-icon { background-image: url('icon-fire.png') !important; }
+.ref-home .home-plan button:nth-of-type(1) i { background-image: url('icon-calendar.png') !important; }
+.ref-home .home-plan button:nth-of-type(2) i { background-image: url('icon-target.png') !important; }
+.ref-home .home-plan button:nth-of-type(3) i { background-image: url('icon-book.png') !important; }
+.ref-home .reference-course-grid button:nth-of-type(1) .reference-course-icon { background-image: url('icon-book-ring.png') !important; }
+.ref-home .reference-course-grid button:nth-of-type(2) .reference-course-icon { background-image: url('icon-target.png') !important; }
+.ref-home .reference-course-grid button:nth-of-type(3) .reference-course-icon { background-image: url('icon-progress.png') !important; }
+.ref-home .reference-course-grid button:nth-of-type(4) .reference-course-icon { background-image: url('icon-book.png') !important; }
 
 /* Keep a course's progress, percentage and status visually grouped. */
 @media (min-width: 901px) {
@@ -149,11 +149,11 @@
     font-size: 25px;
   }
 }
-.ref-home .deadline-list button:nth-of-type(1) .deadline-icon { background-image: url('/icon-target.png') !important; }
-.ref-home .deadline-list button:nth-of-type(2) .deadline-icon { background-image: url('/icon-fire.png') !important; }
-.ref-home .deadline-list button:nth-of-type(3) .deadline-icon { background-image: url('/icon-calendar.png') !important; }
-.ref-home .xp-progress > i { background-image: url('/icon-level.png') !important; }
-.ref-home .nexa-ai-orb { background-image: url('/icon-orb.png') !important; }
+.ref-home .deadline-list button:nth-of-type(1) .deadline-icon { background-image: url('icon-target.png') !important; }
+.ref-home .deadline-list button:nth-of-type(2) .deadline-icon { background-image: url('icon-fire.png') !important; }
+.ref-home .deadline-list button:nth-of-type(3) .deadline-icon { background-image: url('icon-calendar.png') !important; }
+.ref-home .xp-progress > i { background-image: url('icon-level.png') !important; }
+.ref-home .nexa-ai-orb { background-image: url('icon-orb.png') !important; }
 
 @media (min-width: 901px) {
   .ref-home .xp-progress {
@@ -348,7 +348,7 @@
   height: 54px !important;
   border: 0 !important;
   border-radius: 0 !important;
-  background: url('/assets/nexa-ai-bot.png') center / contain no-repeat !important;
+  background: url('assets/nexa-ai-bot.png') center / contain no-repeat !important;
   box-shadow: none !important;
   color: transparent !important;
   animation: ai-bot-float 2.8s ease-in-out infinite !important;
@@ -973,10 +973,10 @@
   background-size: contain !important;
   color: transparent !important;
 }
-.ref-home .reference-course-grid button:nth-of-type(1) .reference-course-icon { background-image: url('/icon-book-ring.png') !important; }
-.ref-home .reference-course-grid button:nth-of-type(2) .reference-course-icon { background-image: url('/icon-target.png') !important; }
-.ref-home .reference-course-grid button:nth-of-type(3) .reference-course-icon { background-image: url('/icon-progress.png') !important; }
-.ref-home .reference-course-grid button:nth-of-type(4) .reference-course-icon { background-image: url('/icon-book.png') !important; }
+.ref-home .reference-course-grid button:nth-of-type(1) .reference-course-icon { background-image: url('icon-book-ring.png') !important; }
+.ref-home .reference-course-grid button:nth-of-type(2) .reference-course-icon { background-image: url('icon-target.png') !important; }
+.ref-home .reference-course-grid button:nth-of-type(3) .reference-course-icon { background-image: url('icon-progress.png') !important; }
+.ref-home .reference-course-grid button:nth-of-type(4) .reference-course-icon { background-image: url('icon-book.png') !important; }
 
 @media (min-width: 901px) {
   .learning-dashboard .learning-course-card > strong {
