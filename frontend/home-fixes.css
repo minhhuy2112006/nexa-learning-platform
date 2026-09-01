@@ -1391,3 +1391,18 @@
     stroke: currentColor !important;
   }
 }
+/* Desktop rail is viewport-anchored: route content cannot move it. */
+@media (min-width: 901px) {
+  #product-view .module-layout .learning-rail {
+    position: fixed !important;
+    top: 75px !important;
+    bottom: 12px !important;
+    left: 10px !important;
+    z-index: 3;
+    width: 195px !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    margin: 0 !important;
+  }
+}
