@@ -28,14 +28,28 @@
 
   .module-layout:has(.library-dashboard) > .library-dashboard {
     box-sizing: border-box;
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
     min-height: 0;
     height: calc(100dvh - 64px);
     max-height: calc(100dvh - 64px);
+    overflow: hidden;
+  }
+
+  .library-scroll-area {
+    min-height: 0;
+    overflow-x: hidden;
     overflow-y: auto;
     overscroll-behavior: contain;
+    padding-right: 6px;
     scrollbar-color: #38517c transparent;
     scrollbar-width: thin;
   }
+
+  .library-scroll-area::-webkit-scrollbar { width: 7px; }
+  .library-scroll-area::-webkit-scrollbar-thumb { border-radius: 8px; background: #38517c; }
+  .library-scroll-area .library-content-grid { padding-bottom: 12px; }
+  .library-pagination { margin-top: 0; padding: 12px 0 4px; }
 }
 @media (max-width: 1120px) { .library-content-grid { grid-template-columns: 1fr; }.library-notes-panel { display: none; } }.library-resource-card { min-height: 220px; }
 @media (max-width: 800px) { .library-dashboard { padding: 14px !important; }.library-toolbar { align-items: stretch; flex-direction: column; }.library-search { flex-basis: 38px; }.library-course-chips { justify-content: start; }.library-resource-grid { grid-template-columns: 1fr 1fr; } }
