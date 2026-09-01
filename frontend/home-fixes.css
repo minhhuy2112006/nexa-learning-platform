@@ -102,7 +102,7 @@
 
 /* Align the three desktop columns a little closer to the top navigation. */
 @media (min-width: 901px) {
-  .module-layout:has(.learning-dashboard) .module-sidebar,
+  .learning-section .module-sidebar,
   .learning-dashboard .learning-content {
     position: relative;
     top: -6px;
@@ -559,8 +559,8 @@
   .learning-main { min-width: 0; }
   .learning-main .learning-course-grid { margin-top: 12px; }
   .learning-dashboard .learning-aside { align-self: start; }
-  .module-layout:has(.learning-dashboard) .module-sidebar { padding-top: 16px; background: linear-gradient(180deg, #111b34, #0b1427); }
-  .module-layout:has(.learning-dashboard) .module-sidebar > p { margin-top: 0; }
+  .learning-section .module-sidebar { padding-top: 16px; background: linear-gradient(180deg, #111b34, #0b1427); }
+  .learning-section .module-sidebar > p { margin-top: 0; }
 }
 
 /* Deep navy background matched to the Learning reference. */
@@ -568,7 +568,7 @@
 .module-layout:has(.learning-dashboard),
 .learning-dashboard { background: #030a16 !important; }
 .module-layout:has(.learning-dashboard) { background: radial-gradient(circle at 44% 0%, #101f421f, transparent 38%), #030a16 !important; }
-.module-layout:has(.learning-dashboard) .module-sidebar { background: linear-gradient(180deg, #071225, #040b17) !important; border-color: #16294a !important; }
+.learning-section .module-sidebar { background: linear-gradient(180deg, #071225, #040b17) !important; border-color: #16294a !important; }
 .learning-course-card,.streak-card,.learning-deadlines,.unfinished-summary { background: linear-gradient(145deg, #08172d, #050f20) !important; border-color: #12345e !important; }
 .learning-unfinished { background: linear-gradient(90deg, #071a36, #050f20) !important; border-color: #12437c !important; }
 .learning-tools label,.learning-tools button { background: #061126 !important; border-color: #102d59 !important; }
@@ -576,9 +576,9 @@
 /* Reference-matched panel structure and icon system for Learning. */
 .product-shell:has(.learning-dashboard) .product-sidebar nav button.active { position: relative; border-bottom-color: transparent !important; background: transparent !important; }
 .product-shell:has(.learning-dashboard) .product-sidebar nav button.active:after { position: absolute; right: 20%; bottom: 1px; left: 20%; height: 2px; content: ''; border-radius: 2px; background: #9b55ff; box-shadow: 0 0 11px #914eff; }
-.module-layout:has(.learning-dashboard) .module-menu-icon { display: grid; flex: 0 0 18px; place-items: center; width: 18px; height: 18px; color: #bbc8e7; }
-.module-layout:has(.learning-dashboard) .module-menu-icon svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.65; stroke-linecap: round; stroke-linejoin: round; }
-.module-layout:has(.learning-dashboard) .module-sidebar button.active .module-menu-icon { color: #e8ddff; filter: drop-shadow(0 0 5px #ae72ff); }
+.learning-section .module-menu-icon { display: grid; flex: 0 0 18px; place-items: center; width: 18px; height: 18px; color: #bbc8e7; }
+.learning-section .module-menu-icon svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.65; stroke-linecap: round; stroke-linejoin: round; }
+.learning-section .module-sidebar button.active .module-menu-icon { color: #e8ddff; filter: drop-shadow(0 0 5px #ae72ff); }
 .learning-sidebar-level > i { grid-template-rows: auto 1fr; padding: 10px 0 9px; }
 .learning-sidebar-level > i small,.learning-sidebar-level > i b { position: relative; z-index: 1; color: #fff; }
 .learning-sidebar-level > i small { align-self: end; font: 700 11px/1 Inter, sans-serif; }.learning-sidebar-level > i b { align-self: start; font-size: 28px; }
@@ -678,7 +678,7 @@
     radial-gradient(circle at 83% 18%, #254ce530, transparent 24%),
     #0b1120 !important;
 }
-.module-layout:has(.learning-dashboard) .module-sidebar {
+.learning-section .module-sidebar {
   background: #0d1422 !important;
   border-color: #2b3c61 !important;
 }
@@ -696,8 +696,8 @@
 
 /* Give the Learning workspace an inset left rail and let both content columns meet the lower rhythm. */
 @media (min-width: 901px) {
-  .module-layout:has(.learning-dashboard) { grid-template-columns: 205px minmax(0, 1fr); }
-  .module-layout:has(.learning-dashboard) .module-sidebar {
+  .learning-section { grid-template-columns: 205px minmax(0, 1fr); }
+  .learning-section .module-sidebar {
     min-height: auto;
     margin: 12px 0 12px 10px;
     padding: 17px 10px;
@@ -751,24 +751,24 @@
 
 /* Keep every Learning menu item visible within the inset sidebar. */
 @media (min-width: 901px) {
-  .module-layout:has(.learning-dashboard) .module-sidebar {
+  .learning-section .module-sidebar {
     padding: 11px 10px 10px;
     overflow-y: auto;
     scrollbar-width: none;
   }
-  .module-layout:has(.learning-dashboard) .module-sidebar::-webkit-scrollbar { display: none; }
-  .module-layout:has(.learning-dashboard) .learning-sidebar-level {
+  .learning-section .module-sidebar::-webkit-scrollbar { display: none; }
+  .learning-section .learning-sidebar-level {
     gap: 6px;
     margin: -1px 0 10px;
     padding: 7px 6px 10px;
   }
-  .module-layout:has(.learning-dashboard) .learning-sidebar-level > i {
+  .learning-section .learning-sidebar-level > i {
     width: 62px;
     height: 62px;
   }
-  .module-layout:has(.learning-dashboard) .learning-sidebar-level > i b { font-size: 24px; }
-  .module-layout:has(.learning-dashboard) .module-sidebar > p { margin: 0 6px 7px; }
-  .module-layout:has(.learning-dashboard) .module-sidebar button {
+  .learning-section .learning-sidebar-level > i b { font-size: 24px; }
+  .learning-section .module-sidebar > p { margin: 0 6px 7px; }
+  .learning-section .module-sidebar button {
     min-height: 36px;
     margin: 2px 0;
     padding: 8px 10px;
@@ -1105,15 +1105,15 @@
 
 /* Give the Level summary a calmer vertical rhythm. */
 @media (min-width: 901px) {
-  .module-layout:has(.learning-dashboard) .learning-sidebar-level {
+  .learning-section .learning-sidebar-level {
     gap: 10px;
     margin-bottom: 13px;
     padding-bottom: 14px;
   }
-  .module-layout:has(.learning-dashboard) .learning-sidebar-level > span {
+  .learning-section .learning-sidebar-level > span {
     margin-top: 2px;
   }
-  .module-layout:has(.learning-dashboard) .learning-sidebar-level > small {
+  .learning-section .learning-sidebar-level > small {
     margin-top: 2px;
   }
 }
@@ -1150,18 +1150,18 @@
 
 /* Let the Learning menu use its vertical rail more comfortably. */
 @media (min-width: 901px) {
-  .module-layout:has(.learning-dashboard) .module-sidebar button {
+  .learning-section .module-sidebar button {
     min-height: 42px !important;
     margin: 3px 0 !important;
     padding: 10px 12px !important;
     font-size: 14px !important;
   }
-  .module-layout:has(.learning-dashboard) .module-sidebar .module-menu-icon {
+  .learning-section .module-sidebar .module-menu-icon {
     flex-basis: 20px;
     width: 20px;
     height: 20px;
   }
-  .module-layout:has(.learning-dashboard) .module-sidebar .module-menu-icon svg {
+  .learning-section .module-sidebar .module-menu-icon svg {
     width: 19px;
     height: 19px;
   }
@@ -1193,7 +1193,6 @@
 
 /* Curriculum workspace — semester-based, academic courses only. */
 .product-shell:has(.curriculum-dashboard),.module-layout:has(.curriculum-dashboard),.curriculum-dashboard{background:radial-gradient(circle at 12% 5%,#4c20c329,transparent 28%),radial-gradient(circle at 83% 18%,#254ce530,transparent 24%),#0b1120!important}.curriculum-dashboard{width:min(100%,1190px);margin:0 auto;padding:2px 0 28px}.curriculum-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:17px}.curriculum-heading h1{font-size:clamp(24px,2.15vw,32px)}.curriculum-heading .view-subtitle{max-width:690px;margin-top:7px}.curriculum-program-bar,.curriculum-controls,.curriculum-filter-note,.curriculum-semester{border:1px solid #526ac2;background:radial-gradient(circle at 18% 0%,#744fe238,transparent 43%),linear-gradient(145deg,#1b2d61,#111d45)}.curriculum-program-bar{display:flex;align-items:end;justify-content:space-between;gap:18px;padding:13px 15px;border-radius:12px 12px 0 0}.curriculum-program-bar label{display:grid;gap:6px;min-width:min(100%,310px)}.curriculum-program-bar label>span,.curriculum-course-table header{color:#9daccc;font:600 10px/1.2 Inter,sans-serif}.curriculum-program-bar select{appearance:none;min-width:265px;padding:10px 34px 10px 11px;border:1px solid #536ac2;border-radius:8px;background:#111c3c;color:#f1f3ff;font:600 13px Inter,sans-serif}.curriculum-summary{display:flex;align-items:center;gap:14px;text-align:left}.curriculum-summary section{display:flex;align-items:center;gap:7px}.curriculum-summary section b{color:#fff;font:700 27px/1 Inter,sans-serif}.curriculum-summary section:first-child b{color:#78e3a5}.curriculum-summary section span{color:#c6d0e8;font:600 10px/1.3 Inter,sans-serif}.curriculum-summary>i{width:1px;height:29px;background:#5870bd;opacity:.68}.curriculum-controls{display:flex;align-items:center;gap:9px;padding:10px 14px;border-top-color:#384a8d}.curriculum-search{display:flex;align-items:center;gap:8px;min-width:210px;flex:1 1 250px;height:35px;padding:0 10px;border:1px solid #4660b6;border-radius:8px;background:#101b3a;color:#aebee8;font-size:17px}.curriculum-search input{min-width:0;width:100%;border:0;outline:0;background:transparent;color:#eff2ff;font:12px Inter,sans-serif}.curriculum-filter-group{display:flex;flex-wrap:wrap;gap:6px}.curriculum-filter-group button,.curriculum-view-mode{min-height:35px;padding:0 10px;border:1px solid #4058a9;border-radius:7px;background:#142044;color:#c4d0ea;font:600 10px Inter,sans-serif;cursor:pointer}.curriculum-filter-group button.active{border-color:#8064ed;background:#332675;color:#ded5ff}.curriculum-view-mode{margin-left:auto;white-space:nowrap}.curriculum-view-mode span{margin-left:15px;color:#a99fff}.curriculum-filter-note{display:flex;align-items:center;gap:8px;padding:8px 14px;border-top:0;border-radius:0 0 12px 12px;color:#aebfe0;font:11px/1.4 Inter,sans-serif}.curriculum-filter-note i{display:grid;place-items:center;width:16px;height:16px;border-radius:50%;background:#6ee1af;color:#14274a;font-size:10px;font-style:normal}.curriculum-semester-list{display:grid;gap:8px;margin-top:15px}.curriculum-semester{overflow:hidden;border-radius:10px}.curriculum-semester-toggle{display:grid;grid-template-columns:20px minmax(195px,1fr) auto auto;align-items:center;gap:10px;width:100%;min-height:47px;padding:0 14px;border:0;background:transparent;color:#f5f6ff;text-align:left;cursor:pointer}.curriculum-semester-toggle>i{display:grid;place-items:center;width:18px;height:18px;color:#a798ff}.curriculum-semester-toggle>i svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round}.curriculum-semester:not(.is-open) .curriculum-semester-toggle>i{transform:rotate(-90deg)}.curriculum-semester-toggle>span{display:flex;align-items:baseline;gap:5px}.curriculum-semester-toggle b{font:700 14px Inter,sans-serif}.curriculum-semester-toggle small,.curriculum-semester-toggle>em{color:#aebde0;font:11px Inter,sans-serif}.curriculum-semester-toggle>em{font-style:normal;white-space:nowrap}.curriculum-status{display:inline-flex;align-items:center;justify-content:center;min-width:84px;padding:5px 8px;border-radius:12px;font:700 10px Inter,sans-serif;font-style:normal;white-space:nowrap}.curriculum-status.completed{background:#1b513a;color:#90e6ac}.curriculum-status.in-progress{background:#56351b;color:#ffbf63}.curriculum-status.not-started{background:#27344e;color:#b5c0d6}.curriculum-course-table{display:none;border-top:1px solid #435dab;background:#16264d}.curriculum-semester.is-open .curriculum-course-table{display:block}.curriculum-course-table header,.curriculum-course-row{display:grid;grid-template-columns:28px 86px minmax(260px,1fr) minmax(150px,.52fr) 84px;align-items:center;column-gap:10px;box-sizing:border-box}.curriculum-course-table header{min-height:32px;padding:0 14px;border-bottom:1px solid #304b92;text-transform:uppercase;letter-spacing:.04em}.curriculum-course-table header span:nth-child(1),.curriculum-course-row .curriculum-code{grid-column:2}.curriculum-course-table header span:nth-child(2),.curriculum-course-row .curriculum-course-name{grid-column:3}.curriculum-course-table header span:nth-child(3),.curriculum-course-row .curriculum-prerequisite{grid-column:4;justify-self:stretch;text-align:center}.curriculum-course-table header span:nth-child(4),.curriculum-course-row .curriculum-status{grid-column:5;justify-self:center}.curriculum-course-row{width:100%;min-height:46px;padding:0 14px;border:0;border-bottom:1px solid #29447f;background:transparent;color:#edf1ff;text-align:left;cursor:pointer}.curriculum-course-row:hover{background:#203869}.curriculum-course-row>i{display:grid;place-items:center;width:19px;height:19px;border-radius:5px;background:#332774;color:#c5b8ff;font-size:10px;font-style:normal}.curriculum-code,.curriculum-prerequisite{color:#9daccc;font:600 10px/1.2 Inter,sans-serif}.curriculum-course-name b,.curriculum-course-name small{display:block}.curriculum-course-name b{font:600 12px Inter,sans-serif}.curriculum-course-name small{margin-top:3px;color:#97a9cc;font:10px Inter,sans-serif}
-@media(min-width:901px){.product-shell:has(.curriculum-dashboard){overflow:visible!important}.module-layout:has(.curriculum-dashboard){grid-template-columns:205px minmax(0,1fr);align-items:start}.module-layout:has(.curriculum-dashboard) .module-sidebar{position:sticky;top:75px;align-self:start;width:auto;height:calc(100vh - 88px);min-height:0!important;max-height:calc(100vh - 88px);margin:12px 0 12px 10px;padding:11px 10px 10px;overflow-y:auto;scrollbar-width:none;border:1px solid #2b3c61!important;border-radius:12px;background:#0d1422!important}.module-layout:has(.curriculum-dashboard) .module-sidebar::-webkit-scrollbar{display:none}.module-layout:has(.curriculum-dashboard) .learning-sidebar-level{gap:10px;margin:-1px 0 13px;padding:7px 6px 14px}.module-layout:has(.curriculum-dashboard) .learning-sidebar-level>i{width:62px;height:62px}.module-layout:has(.curriculum-dashboard) .learning-sidebar-level>i b{font-size:24px}.module-layout:has(.curriculum-dashboard) .module-sidebar>p{margin:0 6px 7px}.module-layout:has(.curriculum-dashboard) .module-sidebar button{min-height:42px;margin:3px 0;padding:10px 12px;font-size:14px}.module-layout:has(.curriculum-dashboard) .module-menu-icon{display:grid;flex:0 0 20px;place-items:center;width:20px;height:20px}.module-layout:has(.curriculum-dashboard) .module-menu-icon svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.65}}
 @media(max-width:960px){.curriculum-controls{align-items:stretch;flex-wrap:wrap}.curriculum-filter-group{flex:1 1 100%}.curriculum-view-mode{margin-left:0}}@media(max-width:640px){.curriculum-heading,.curriculum-program-bar{align-items:stretch;flex-direction:column}.curriculum-program-bar select{width:100%;min-width:0}.curriculum-filter-group{display:grid;grid-template-columns:1fr 1fr}.curriculum-semester-toggle{grid-template-columns:18px 1fr auto;gap:7px;padding:9px 10px}.curriculum-semester-toggle>em{grid-column:2/-1;grid-row:2}.curriculum-semester-toggle .curriculum-status{grid-column:3;grid-row:1;min-width:72px}.curriculum-course-table header{display:none}.curriculum-course-row{grid-template-columns:22px 1fr auto;gap:8px;min-height:56px;padding:7px 10px}.curriculum-code,.curriculum-prerequisite{display:none}.curriculum-course-row .curriculum-status{grid-column:3;grid-row:1/span 2;min-width:74px;font-size:9px}}
 
 /* Curriculum baseline: prerequisite values share the exact centre of their column. */
@@ -1204,10 +1203,14 @@
   justify-self: stretch;
   text-align: center !important;
 }
-/* The Learning and Curriculum routes intentionally share one desktop rail. */
+/* Shared Learning-area sidebar: every Learning route uses this single component. */
 @media (min-width: 901px) {
-  .module-layout:has(.learning-dashboard) .module-sidebar,
-  .module-layout:has(.curriculum-dashboard) .module-sidebar {
+  .learning-section {
+    grid-template-columns: 205px minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .learning-section .module-sidebar {
     position: relative !important;
     top: -6px !important;
     align-self: start;
@@ -1224,68 +1227,56 @@
     background: #0d1422 !important;
   }
 
-  .module-layout:has(.learning-dashboard) .module-sidebar::-webkit-scrollbar,
-  .module-layout:has(.curriculum-dashboard) .module-sidebar::-webkit-scrollbar {
-    display: none;
-  }
+  .learning-section .module-sidebar::-webkit-scrollbar { display: none; }
 
-  .module-layout:has(.learning-dashboard) .learning-sidebar-level,
-  .module-layout:has(.curriculum-dashboard) .learning-sidebar-level {
+  .learning-section .learning-sidebar-level {
     gap: 10px;
     margin: -1px 0 13px;
     padding: 7px 6px 14px;
   }
+  .learning-section .learning-sidebar-level > i { width: 62px; height: 62px; }
+  .learning-section .learning-sidebar-level > i b { font-size: 24px; }
+  .learning-section .module-sidebar > p { margin: 0 6px 7px; }
 
-  .module-layout:has(.learning-dashboard) .learning-sidebar-level > i,
-  .module-layout:has(.curriculum-dashboard) .learning-sidebar-level > i {
-    width: 62px;
-    height: 62px;
-  }
-
-  .module-layout:has(.learning-dashboard) .learning-sidebar-level > i b,
-  .module-layout:has(.curriculum-dashboard) .learning-sidebar-level > i b {
-    font-size: 24px;
-  }
-
-  .module-layout:has(.learning-dashboard) .module-sidebar > p,
-  .module-layout:has(.curriculum-dashboard) .module-sidebar > p {
-    margin: 0 6px 7px;
-  }
-
-  .module-layout:has(.learning-dashboard) .module-sidebar button,
-  .module-layout:has(.curriculum-dashboard) .module-sidebar button {
+  .learning-section .module-sidebar button {
     min-height: 42px !important;
     margin: 3px 0 !important;
     padding: 10px 12px !important;
     font-size: 14px !important;
   }
 
-  .module-layout:has(.learning-dashboard) .module-sidebar .module-menu-icon,
-  .module-layout:has(.curriculum-dashboard) .module-sidebar .module-menu-icon {
+  .learning-section .module-menu-icon {
     display: grid;
     flex: 0 0 20px;
     place-items: center;
     width: 20px;
     height: 20px;
+    color: #bbc8e7;
   }
-
-  .module-layout:has(.learning-dashboard) .module-sidebar .module-menu-icon svg,
-  .module-layout:has(.curriculum-dashboard) .module-sidebar .module-menu-icon svg {
+  .learning-section .module-menu-icon svg {
     width: 19px;
     height: 19px;
     fill: none;
     stroke: currentColor;
     stroke-width: 1.65;
   }
+  .learning-section .module-sidebar button.active {
+    border-radius: 8px;
+    background: linear-gradient(90deg, rgba(98, 59, 210, .65), rgba(74, 49, 170, .45)) !important;
+    color: #fff !important;
+  }
+  .learning-section .module-sidebar button.active .module-menu-icon {
+    color: #e8ddff;
+    filter: drop-shadow(0 0 5px #ae72ff);
+  }
 }
+
 /* Keep the shared level badge visually identical when the route changes. */
-.module-layout:has(.learning-dashboard) .learning-sidebar-level > i,
-.module-layout:has(.curriculum-dashboard) .learning-sidebar-level > i {
+.learning-section .learning-sidebar-level > i {
   animation: none;
   filter: drop-shadow(0 0 10px #7655e5);
 }
-.module-layout:has(.learning-dashboard) .learning-sidebar-level > i::before,
-.module-layout:has(.curriculum-dashboard) .learning-sidebar-level > i::before {
+.learning-section .learning-sidebar-level > i::before {
   animation: none;
   opacity: 0;
 }
