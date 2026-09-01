@@ -128,42 +128,28 @@ const views = {
 
   library: () => `
     <section class="product-view library-dashboard">
-      <header class="library-heading">
-        <div><p class="view-kicker">LEARNING LIBRARY</p><h1>My Library</h1><p>Your learning collection</p></div>
+      <header class="library-heading"><div><p class="view-kicker">LEARNING LIBRARY</p><h1>My Library</h1><p>Your learning collection</p></div></header>
+      <section class="library-toolbar" aria-label="Library controls">
         <label class="library-search"><span>⌕</span><input type="search" aria-label="Search library" placeholder="Search library" /></label>
-      </header>
-      <nav class="library-type-filters" aria-label="Filter library by type">
-        <button class="active" type="button" data-library-filter="all">All</button><button type="button" data-library-filter="textbook">Textbooks</button><button type="button" data-library-filter="material">Materials</button><button type="button" data-library-filter="saved">Saved</button><button type="button" data-library-filter="note">Notes</button>
-      </nav>
-      <nav class="library-course-filters" aria-label="Filter library by course">
-        <button class="active" type="button" data-library-course="all">All courses</button><button type="button" data-library-course="database">Database Systems</button><button type="button" data-library-course="data-structures">Data Structures</button><button type="button" data-library-course="analytics">Business Analytics</button>
-      </nav>
+        <nav class="library-type-filters" aria-label="Filter library by type"><button class="active" type="button" data-library-filter="all">All</button><button type="button" data-library-filter="textbook">Textbooks</button><button type="button" data-library-filter="material">Materials</button><button type="button" data-library-filter="saved">Saved</button><button type="button" data-library-filter="note">Notes</button></nav>
+      </section>
+      <section class="library-course-manager" aria-label="Courses in Library"><div><b>Your courses</b><small>Remove a course to hide all of its resources from Library.</small></div><div class="library-course-chips"><span data-library-course-chip="database">Database Systems<button type="button" data-library-remove-course="database" aria-label="Remove Database Systems">×</button></span><span data-library-course-chip="data-structures">Data Structures<button type="button" data-library-remove-course="data-structures" aria-label="Remove Data Structures">×</button></span><span data-library-course-chip="analytics">Business Analytics<button type="button" data-library-remove-course="analytics" aria-label="Remove Business Analytics">×</button></span></div></section>
       <div class="library-content-grid">
         <section class="library-resource-grid" aria-label="Learning resources">
-          <article class="library-resource-card" data-kind="textbook" data-course="database" data-search="database systems concepts design textbook">
-            <i class="resource-cover database">DATABASE<br />SYSTEMS<small>Concepts and Design</small></i><div class="resource-copy"><b>Database Systems: Concepts and Design</b><small>CS302 · Textbook</small><span><em style="width:72%"></em></span><strong>72%</strong></div><button data-route="textbook">Continue reading <span>→</span></button>
-          </article>
-          <article class="library-resource-card" data-kind="textbook" data-course="data-structures" data-search="data structures algorithms python textbook">
-            <i class="resource-cover structures">DATA<br />STRUCTURES<small>& Algorithms in Python</small></i><div class="resource-copy"><b>Data Structures & Algorithms in Python</b><small>CS201 · Textbook</small><span><em style="width:48%"></em></span><strong>48%</strong></div><button data-route="textbook">Continue reading <span>→</span></button>
-          </article>
-          <article class="library-resource-card" data-kind="material" data-course="database" data-search="sql practice sheet set 3 material">
-            <i class="resource-cover sheet">SQL<small>PRACTICE SHEET</small><b>▦</b></i><div class="resource-copy"><b>SQL Practice Sheet · Set 3</b><small>CS302 · Material</small><span class="complete"><em style="width:100%"></em></span><strong>100%</strong></div><button data-route="practice">Open material <span>→</span></button>
-          </article>
-          <article class="library-resource-card" data-kind="saved" data-course="database" data-search="indexing techniques database systems article saved">
-            <i class="resource-cover article"><small>ARTICLE</small><b>INDEX</b></i><div class="resource-copy"><b>Indexing Techniques in Database Systems</b><small>CS302 · Saved article</small><span class="resource-saved">✓ Saved</span></div><button type="button">Open article <span>→</span></button>
-          </article>
-          <article class="library-resource-card" data-kind="material" data-course="database" data-search="normalization dbms slides lecture">
-            <i class="resource-cover lecture">Normalization<small>Lecture 8</small></i><div class="resource-copy"><b>Normalization in DBMS</b><small>CS302 · Slide deck</small><span><em style="width:65%"></em></span><strong>65%</strong></div><button data-route="textbook">Open slides <span>→</span></button>
-          </article>
-          <article class="library-resource-card" data-kind="note" data-course="database" data-search="dbms notes collection">
-            <i class="resource-cover notes">DBMS<br />Notes<small>Collection</small></i><div class="resource-copy"><b>DBMS Notes Collection</b><small>CS302 · Notes</small><span class="resource-saved">✓ Saved</span></div><button data-route="textbook">Open notes <span>→</span></button>
-          </article>
+          <article class="library-resource-card" data-kind="textbook" data-course="database" data-search="database systems concepts design textbook pdf"><i class="resource-cover database">DATABASE<br />SYSTEMS<small>Concepts and Design</small></i><div class="resource-copy"><b>Database Systems: Concepts and Design</b><small>CS302 · Textbook</small><p class="resource-description">A practical guide to relational databases, design and normalization.</p><div class="resource-progress"><i><em style="width:72%"></em></i><b>72% complete</b><span>Chapter 3 of 12 · Read today</span></div><p class="resource-file">PDF · 8.4 MB <span>Purchased 12 May 2025</span></p></div><footer><button data-route="textbook">Continue reading <span>→</span></button><button type="button" title="Save book" aria-label="Save book">♧</button><button type="button" title="Download PDF" aria-label="Download PDF">⇩</button><button type="button" title="More options" aria-label="More options">•••</button></footer></article>
+          <article class="library-resource-card" data-kind="textbook" data-course="data-structures" data-search="data structures algorithms python textbook pdf"><i class="resource-cover structures">DATA<br />STRUCTURES<small>& Algorithms in Python</small></i><div class="resource-copy"><b>Data Structures & Algorithms in Python</b><small>CS201 · Textbook</small><p class="resource-description">Core algorithms and data structures with Python examples.</p><div class="resource-progress"><i><em style="width:48%"></em></i><b>48% complete</b><span>Chapter 5 of 14 · Read 2 days ago</span></div><p class="resource-file">PDF · 11.2 MB <span>Purchased 20 Apr 2025</span></p></div><footer><button data-route="textbook">Continue reading <span>→</span></button><button type="button" title="Save book" aria-label="Save book">♧</button><button type="button" title="Download PDF" aria-label="Download PDF">⇩</button><button type="button" title="More options" aria-label="More options">•••</button></footer></article>
+          <article class="library-resource-card" data-kind="material" data-course="database" data-search="sql practice sheet set 3 material pdf"><i class="resource-cover sheet">SQL<small>PRACTICE SHEET</small><b>▦</b></i><div class="resource-copy"><b>SQL Practice Sheet · Set 3</b><small>CS302 · Practice material</small><p class="resource-description">Practice queries for joins, grouping and nested statements.</p><div class="resource-progress"><i class="complete"><em style="width:100%"></em></i><b>100% complete</b><span>24 exercises · Completed 14 May</span></div><p class="resource-file">PDF · 1.8 MB <span>Added 10 May 2025</span></p></div><footer><button data-route="practice">Open material <span>→</span></button><button type="button" title="Save material" aria-label="Save material">♧</button><button type="button" title="Download PDF" aria-label="Download PDF">⇩</button><button type="button" title="More options" aria-label="More options">•••</button></footer></article>
+          <article class="library-resource-card" data-kind="saved" data-course="database" data-search="indexing techniques database systems article saved"><i class="resource-cover article"><small>ARTICLE</small><b>INDEX</b></i><div class="resource-copy"><b>Indexing Techniques in Database Systems</b><small>CS302 · Saved article</small><p class="resource-description">Understand B+ trees, hash indexing and query performance.</p><span class="resource-saved">✓ Saved for later</span><p class="resource-file">WEB ARTICLE <span>Saved 15 May 2025</span></p></div><footer><button type="button">Open article <span>→</span></button><button class="is-saved" type="button" title="Saved" aria-label="Saved">✓</button><button type="button" title="Download article" aria-label="Download article">⇩</button><button type="button" title="More options" aria-label="More options">•••</button></footer></article>
+          <article class="library-resource-card" data-kind="material" data-course="database" data-search="normalization dbms slides lecture pptx"><i class="resource-cover lecture">Normalization<small>Lecture 8</small></i><div class="resource-copy"><b>Normalization in DBMS</b><small>CS302 · Slide deck</small><p class="resource-description">A visual walk-through of 1NF, 2NF, 3NF and BCNF.</p><div class="resource-progress"><i><em style="width:65%"></em></i><b>65% complete</b><span>18 of 28 slides · Last opened today</span></div><p class="resource-file">PPTX · 4.6 MB <span>Added 08 May 2025</span></p></div><footer><button data-route="textbook">Open slides <span>→</span></button><button type="button" title="Save slides" aria-label="Save slides">♧</button><button type="button" title="Download PPTX" aria-label="Download PPTX">⇩</button><button type="button" title="More options" aria-label="More options">•••</button></footer></article>
+          <article class="library-resource-card" data-kind="note" data-course="database" data-search="dbms notes collection"><i class="resource-cover notes">DBMS<br />Notes<small>Collection</small></i><div class="resource-copy"><b>DBMS Notes Collection</b><small>CS302 · Personal notes</small><p class="resource-description">Your highlights and summaries from Database Systems.</p><span class="resource-saved">✓ 12 notes saved</span><p class="resource-file">NOTES · 46 KB <span>Updated today</span></p></div><footer><button data-route="textbook">Open notes <span>→</span></button><button class="is-saved" type="button" title="Saved" aria-label="Saved">✓</button><button type="button" title="Export notes" aria-label="Export notes">⇩</button><button type="button" title="More options" aria-label="More options">•••</button></footer></article>
+          <article class="library-resource-card" data-kind="material" data-course="analytics" data-search="business analytics dashboard workbook xlsx"><i class="resource-cover analytics">BUSINESS<br />ANALYTICS<small>Dashboard Workbook</small></i><div class="resource-copy"><b>Business Analytics Dashboard Workbook</b><small>BA204 · Workbook</small><p class="resource-description">A guided workbook for turning data into a clear dashboard.</p><div class="resource-progress"><i><em style="width:18%"></em></i><b>18% complete</b><span>Module 1 of 6 · Not started</span></div><p class="resource-file">XLSX · 2.2 MB <span>Purchased 02 May 2025</span></p></div><footer><button type="button">Open workbook <span>→</span></button><button type="button" title="Save workbook" aria-label="Save workbook">♧</button><button type="button" title="Download XLSX" aria-label="Download XLSX">⇩</button><button type="button" title="More options" aria-label="More options">•••</button></footer></article>
+          <article class="library-resource-card" data-kind="note" data-course="analytics" data-search="data storytelling notes collection"><i class="resource-cover storytelling">DATA<br />STORY<small>Notes</small></i><div class="resource-copy"><b>Data Storytelling Notes</b><small>BA204 · Personal notes</small><p class="resource-description">Frameworks for communicating findings and recommendations.</p><span class="resource-saved">✓ 8 notes saved</span><p class="resource-file">NOTES · 31 KB <span>Updated 13 May 2025</span></p></div><footer><button type="button">Open notes <span>→</span></button><button class="is-saved" type="button" title="Saved" aria-label="Saved">✓</button><button type="button" title="Export notes" aria-label="Export notes">⇩</button><button type="button" title="More options" aria-label="More options">•••</button></footer></article>
         </section>
         <aside class="library-notes-panel"><header><h2>▤ &nbsp; Recent notes</h2><button type="button">View all</button></header><button type="button"><i></i><span><b>Query Optimization Techniques</b><small>CS302</small></span></button><button type="button"><i></i><span><b>B+ Tree Indexing Notes</b><small>CS302</small></span></button><button type="button"><i></i><span><b>Normalization Summary</b><small>CS302</small></span></button></aside>
       </div>
       <p class="library-empty" hidden>No resources match the selected filters.</p>
-    </section>`,
-  'ai-study': () => `<section class="product-view ai-study"><p class="view-kicker">NEXA AI STUDY</p><h1>Hi Minh <span>👋</span></h1><p class="view-subtitle">What would you like to work on?</p><article class="ai-context"><i>✦</i><span>Context active: <b>Database Systems · Chapter 3 · your learning progress</b></span></article><div class="quick-actions"><button data-ai-action="Explain Topic">✦ Explain Topic</button><button data-ai-action="Summarize">≡ Summarize</button><button data-ai-action="Generate Quiz">? Generate Quiz</button><button data-ai-action="Create Flashcards">▣ Create Flashcards</button><button data-ai-action="Create Study Plan">↗ Create Study Plan</button><button data-ai-action="Find Weak Topics">◌ Find Weak Topics</button></div><div class="ai-composer"><input id="ai-question" value="Explain normalization." aria-label="Ask anything about your study" /><button class="btn btn-primary" data-route="ai-answer">Ask AI ↑</button></div></section>`,
+      <footer class="library-pagination" aria-label="Library pagination"><button type="button" data-library-previous>← Previous</button><span><button class="active" type="button" data-library-page="1">1</button><button type="button" data-library-page="2">2</button></span><button type="button" data-library-next>Next →</button></footer>
+    </section>`,  'ai-study': () => `<section class="product-view ai-study"><p class="view-kicker">NEXA AI STUDY</p><h1>Hi Minh <span>👋</span></h1><p class="view-subtitle">What would you like to work on?</p><article class="ai-context"><i>✦</i><span>Context active: <b>Database Systems · Chapter 3 · your learning progress</b></span></article><div class="quick-actions"><button data-ai-action="Explain Topic">✦ Explain Topic</button><button data-ai-action="Summarize">≡ Summarize</button><button data-ai-action="Generate Quiz">? Generate Quiz</button><button data-ai-action="Create Flashcards">▣ Create Flashcards</button><button data-ai-action="Create Study Plan">↗ Create Study Plan</button><button data-ai-action="Find Weak Topics">◌ Find Weak Topics</button></div><div class="ai-composer"><input id="ai-question" value="Explain normalization." aria-label="Ask anything about your study" /><button class="btn btn-primary" data-route="ai-answer">Ask AI ↑</button></div></section>`,
   'ai-answer': () => `<section class="product-view ai-answer"><button class="crumb" data-route="ai-study">← AI Study</button><div class="answer-layout"><main><p class="view-kicker">AI STUDY · DATABASE SYSTEMS</p><h1>Normalization, explained for your course</h1><article class="source-badge">Based on: <b>Database Systems</b> · Chapter 3</article><p>Normalization is the process of structuring a database so that each fact is stored once and relationships remain reliable.</p><h2>Why it matters for MIS301</h2><p>In your current chapter, the goal is to reduce duplicate data before you build tables and write SQL queries. Start with a relation, find its key, then separate unrelated facts.</p><div class="answer-note"><b>AI-generated explanation</b><p>This answer combines your course context with NEXA’s learning model. Verify important details with your textbook.</p></div></main><aside><h3>Continue learning</h3><button data-route="textbook">Read Chapter 3 →</button><button data-route="practice">Try a quiz →</button><button data-route="skill-gap">See SQL skill gap →</button></aside></div></section>`,
   practice: () => `<section class="product-view practice-view"><div class="view-heading"><div><p class="view-kicker">PRACTICE</p><h1>Turn learning into confidence</h1><p class="view-subtitle">Practice is personalized from your course, chapter and uploaded materials.</p></div><button class="btn btn-primary">Create practice set</button></div><div class="practice-options"><button><i>?</i><b>Quiz</b><span>Test your understanding</span></button><button><i>▣</i><b>Flashcards</b><span>Review key concepts</span></button><button><i>✎</i><b>Practice questions</b><span>Apply what you learned</span></button></div><section class="weak-topics"><div><p class="view-kicker">LATEST AI INSIGHT</p><h2>Review Normalization</h2><p>Your latest practice shows a clear opportunity to strengthen this topic.</p><button class="outline-link" data-route="ai-study">Ask AI to explain →</button></div><div class="topic-bars"><span>Normalization <b>42%</b><i><em style="width:42%"></em></i></span><span>SQL <b>78%</b><i><em style="width:78%"></em></i></span><span>ERD <b>85%</b><i><em style="width:85%"></em></i></span></div></section></section>`,
   'skill-gap': () => `<section class="product-view skill-gap-view"><p class="view-kicker">SKILL GAP</p><h1>From where you are to Data Analyst</h1><p class="view-subtitle">NEXA compares your current profile with the skills your target career needs.</p><div class="gap-summary"><div><small>CAREER GOAL</small><b>Data Analyst</b></div><div><small>SKILLS ON TRACK</small><b>2 / 5</b></div><div><small>TOP GAP</small><b>Data Visualization</b></div></div><div class="gap-list"><section><header><h2>Current skills</h2><span>Evidence from profile, courses & projects</span></header><div class="skill-row"><b>SQL</b><i><em style="width:70%"></em></i><strong>70%</strong></div><div class="skill-row"><b>Python</b><i><em style="width:40%"></em></i><strong>40%</strong></div><div class="skill-row"><b>Power BI</b><i><em style="width:35%"></em></i><strong>35%</strong></div><div class="skill-row"><b>Data Visualization</b><i><em style="width:30%"></em></i><strong>30%</strong></div></section><aside><h2>Required next</h2><span>For your Data Analyst goal</span><ul><li>SQL</li><li>Python</li><li>Power BI</li><li>Statistics</li><li>Data Visualization</li></ul><button class="btn btn-primary" data-route="recommendations">Get my plan →</button></aside></div></section>`,
@@ -380,39 +366,68 @@ function setupLibraryControls() {
   const host = document.querySelector('.library-dashboard');
   if (!host) return;
 
+  const storageKey = 'nexa-library-hidden-courses';
+  const removedCourses = new Set(JSON.parse(localStorage.getItem(storageKey) || '[]'));
   const typeFilters = host.querySelectorAll('[data-library-filter]');
-  const courseFilters = host.querySelectorAll('[data-library-course]');
   const search = host.querySelector('.library-search input');
-  const cards = host.querySelectorAll('.library-resource-card');
+  const cards = [...host.querySelectorAll('.library-resource-card')];
+  const chips = host.querySelectorAll('[data-library-course-chip]');
   const empty = host.querySelector('.library-empty');
+  const pagination = host.querySelector('.library-pagination');
+  const previous = host.querySelector('[data-library-previous]');
+  const next = host.querySelector('[data-library-next]');
+  const pageButtons = host.querySelectorAll('[data-library-page]');
+  const pageSize = 6;
   let type = 'all';
-  let course = 'all';
+  let page = 1;
 
   const update = () => {
     const query = search.value.trim().toLowerCase();
-    let shown = 0;
-    cards.forEach((card) => {
+    const matches = cards.filter((card) => {
       const matchesType = type === 'all' || card.dataset.kind === type;
-      const matchesCourse = course === 'all' || card.dataset.course === course;
+      const matchesCourse = !removedCourses.has(card.dataset.course);
       const matchesSearch = !query || card.dataset.search.includes(query);
-      const visible = matchesType && matchesCourse && matchesSearch;
-      card.hidden = !visible;
-      if (visible) shown += 1;
+      return matchesType && matchesCourse && matchesSearch;
     });
-    empty.hidden = shown !== 0;
+    const pageCount = Math.max(1, Math.ceil(matches.length / pageSize));
+    page = Math.min(page, pageCount);
+    cards.forEach((card) => { card.hidden = !matches.includes(card); });
+    matches.forEach((card, index) => { card.hidden = Math.floor(index / pageSize) + 1 !== page; });
+    chips.forEach((chip) => { chip.hidden = removedCourses.has(chip.dataset.libraryCourseChip); });
+    empty.hidden = matches.length !== 0;
+    pagination.hidden = matches.length <= pageSize;
+    previous.disabled = page === 1;
+    next.disabled = page === pageCount;
+    pageButtons.forEach((button) => {
+      const value = Number(button.dataset.libraryPage);
+      button.hidden = value > pageCount;
+      button.classList.toggle('active', value === page);
+    });
   };
 
   typeFilters.forEach((button) => button.addEventListener('click', () => {
     type = button.dataset.libraryFilter;
+    page = 1;
     typeFilters.forEach((item) => item.classList.toggle('active', item === button));
     update();
   }));
-  courseFilters.forEach((button) => button.addEventListener('click', () => {
-    course = button.dataset.libraryCourse;
-    courseFilters.forEach((item) => item.classList.toggle('active', item === button));
+  search.addEventListener('input', () => { page = 1; update(); });
+  previous.addEventListener('click', () => { page = Math.max(1, page - 1); update(); });
+  next.addEventListener('click', () => { page += 1; update(); });
+  pageButtons.forEach((button) => button.addEventListener('click', () => { page = Number(button.dataset.libraryPage); update(); }));
+  host.querySelectorAll('[data-library-remove-course]').forEach((button) => button.addEventListener('click', () => {
+    const course = button.dataset.libraryRemoveCourse;
+    const label = button.parentElement.firstChild.textContent.trim();
+    if (!window.confirm(`Remove ${label} and its resources from your Library?`)) return;
+    removedCourses.add(course);
+    localStorage.setItem(storageKey, JSON.stringify([...removedCourses]));
+    page = 1;
     update();
   }));
-  search.addEventListener('input', update);
+  host.querySelectorAll('.library-resource-card footer button:not([data-route])').forEach((button) => button.addEventListener('click', () => {
+    if (button.title.includes('Save')) button.classList.toggle('is-saved');
+  }));
+  update();
 }
 function setupNexaAiOrb() {
   const host = document.querySelector('.ref-home');
