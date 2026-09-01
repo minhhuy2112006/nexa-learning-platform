@@ -198,3 +198,6 @@
 .library-recent-panel > button b { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 8px; }
 .library-recent-panel > button small { margin-top: 2px; color: #91a5ca; font-size: 7px; }
 .library-side-panel .library-notes-panel > button { padding: 8px 0; }
+/* Supplied artwork replaces text-only covers in the primary Library page. */
+.library-resource-card .resource-cover.cover-image { padding: 0; }
+.library-resource-card .resource-cover.cover-image img { display: block; width: 100%; height: 100%; object-fit: cover; }
