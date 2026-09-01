@@ -222,3 +222,17 @@
 /* Filter chevrons lead their labels from the left edge. */
 .library-select { justify-content: flex-start; gap: 8px; }
 .library-select span { order: -1; flex: 0 0 auto; }
+/* Align and scale filter chevrons independently from their labels. */
+.library-select {
+  align-items: center;
+}
+
+.library-select span {
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+  font: 700 15px/1 Arial, sans-serif;
+  line-height: 1;
+  transform: translateY(-1px);
+}
