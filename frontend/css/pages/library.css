@@ -252,3 +252,5 @@
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
 }
+/* Compensate the visual centre of the CSS triangle within the control. */
+.library-select span::before { transform: translateY(4px); }
