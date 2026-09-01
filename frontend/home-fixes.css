@@ -1278,3 +1278,14 @@
     stroke-width: 1.65;
   }
 }
+/* Keep the shared level badge visually identical when the route changes. */
+.module-layout:has(.learning-dashboard) .learning-sidebar-level > i,
+.module-layout:has(.curriculum-dashboard) .learning-sidebar-level > i {
+  animation: none;
+  filter: drop-shadow(0 0 10px #7655e5);
+}
+.module-layout:has(.learning-dashboard) .learning-sidebar-level > i::before,
+.module-layout:has(.curriculum-dashboard) .learning-sidebar-level > i::before {
+  animation: none;
+  opacity: 0;
+}
