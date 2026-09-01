@@ -235,7 +235,7 @@ function renderProduct(route) {
   const menu = sectionMenus[section];
   const content = (views[view]?.() || views['product-home']()).replaceAll('Minh Anh', 'Vân Anh');
   const learningLevel = section === 'learning' ? '<section class="learning-sidebar-level"><i><small>Lv.</small><b>12</b></i><strong>1,250 / 2,000 XP</strong><span><b></b></span><small>Learning Level</small></section>' : '';
-  document.querySelector('#product-view').innerHTML = menu ? `<div class="module-layout"><aside class="module-sidebar learning-rail">${learningLevel}<p>${section === 'ai-study' ? 'AI STUDY' : section.toUpperCase()}</p>${menu.map(([name,label,icon],index) => `<button data-route="${name}" class="${(name === view || (!index && section === view)) ? 'active' : ''}"><span class="module-menu-icon">${icon}</span><span>${label}</span></button>`).join('')}</aside>${content}</div>` : content;
+  document.querySelector('#product-view').innerHTML = menu ? `<div class="module-layout"><aside class="module-sidebar">${learningLevel}<p>${section === 'ai-study' ? 'AI STUDY' : section.toUpperCase()}</p>${menu.map(([name,label,icon],index) => `<button data-route="${name}" class="${(name === view || (!index && section === view)) ? 'active' : ''}"><span class="module-menu-icon">${icon}</span><span>${label}</span></button>`).join('')}</aside>${content}</div>` : content;
   if (view === 'learning') { setupLearningControls(); requestAnimationFrame(syncLearningSummaryHeight); }
   if (view === 'curriculum') setupCurriculumControls();
   if (view === 'product-home') setupNexaAiOrb();
@@ -294,7 +294,7 @@ function showPage(name, updateHistory = false) {
   const isProduct = productRoutes.has(name);
   const pageName = isProduct ? 'app' : basePages.has(name) ? name : 'home';
   pages.forEach((page) => page.classList.toggle('is-active', page.dataset.page === pageName));
-  document.body.dataset.page = pageName; if (!isProduct) window.scrollTo({ top: 0, behavior: 'instant' });
+  document.body.dataset.page = pageName; window.scrollTo({ top: 0, behavior: 'instant' });
   if (isProduct) { renderProduct(name); requestAnimationFrame(alignHeaderUtilities); }
   if (pageName === 'processing') runProcessing();
   if (updateHistory && window.location.hash !== `#${name}`) window.location.hash = name;
