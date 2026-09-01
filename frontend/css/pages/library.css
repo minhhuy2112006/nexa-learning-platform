@@ -219,3 +219,6 @@
   object-fit: cover;
   object-position: center;
 }
+/* Filter chevrons lead their labels from the left edge. */
+.library-select { justify-content: flex-start; gap: 8px; }
+.library-select span { order: -1; flex: 0 0 auto; }
