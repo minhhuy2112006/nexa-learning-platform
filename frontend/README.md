@@ -6,7 +6,7 @@
 - `css/theme-tuning.css` — theme-level adjustments.
 - `css/component-tuning.css` — shared component refinements.
 - `css/workspace*.css` — product workspace layout, alignment and polish.
-- `css/pages/` — page-specific styles (`home`, `learning`, `study-group`).
+- `css/pages/` — page-specific styles (`home`, `learning`, `reader`, `study-group`).
 - `assets/images/` — local image assets used by the frontend.
 - `serve.js` — dependency-free local development server.
 
