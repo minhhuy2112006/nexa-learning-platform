@@ -220,6 +220,7 @@ const sectionMenus = {
 };
 
 function renderProduct(route) {
+  window.scrollTo(0, 0);
   const view = route === 'dashboard' ? 'product-home' : route;
   const section = ['curriculum','library','practice','course-detail','textbook','ai-study','ai-answer','skill-gap','recommendations','next-step'].includes(view) ? 'learning' : view === 'study-group' ? 'community' : view;
   const nav = document.querySelector('.product-sidebar nav');
